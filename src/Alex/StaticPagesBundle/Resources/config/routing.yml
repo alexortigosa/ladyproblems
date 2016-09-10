@@ -1,0 +1,3 @@
+alex_static_pages_homepage:
+    path:     /
+    defaults: { _controller: AlexStaticPagesBundle:Default:index }

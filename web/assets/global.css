@@ -1,0 +1,17 @@
+body{
+	background:black;
+}
+#page{
+	background:black;
+	margin-top: 1%;
+	}
+#center_column{
+	background: white;
+	padding-right: 2%;
+	padding-left: 2%;
+}
+
+#header{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
