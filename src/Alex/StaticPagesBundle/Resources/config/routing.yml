@@ -1,3 +1,12 @@
 alex_static_pages_homepage:
     path:     /
     defaults: { _controller: AlexStaticPagesBundle:Default:index }
+alex_static_pages_ecomerce:
+    path:     /servicios/e-commerce
+    defaults: { _controller: AlexStaticPagesBundle:Default:ecom }
+alex_static_pages_medida:
+    path:     /servicios/amedida
+    defaults: { _controller: AlexStaticPagesBundle:Default:medida }
+alex_static_pages_integration:
+    path:     /servicios/integracion
+    defaults: { _controller: AlexStaticPagesBundle:Default:integration }

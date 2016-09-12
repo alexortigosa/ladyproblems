@@ -1,38 +1,56 @@
 <!doctype html>
 <html>
     <head>
-       <title>Alex Ortigosa Web</title>
+       <title>{% block title %}Alex Ortigosa Web{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/global.css') }}"/>
+
         <script type="text/javascript" src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/vendor/jquery/dist/jquery.slim.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-        <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('assets/global.css') }}"/>
+       {% block customcss %}
+       {% endblock %}
     </head>
             
     <body>
         <div id="page" class="container-fluid">
-            <div id="colum_left" class="col-md-1 col-lg-1">
+            <div id="colum_left" class="col-sm-1 col-md-1 col-lg-1">
             </div>
-            <div id="center_column" class="col-xs-12 col-md-10 col-lg-10">
+            <div id="center_column" class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
                 <div id="header" class="row">
-                    <div class="logoImage col-xs-12 col-md-2 col-lg-2">
-                        <img src="{{ asset('assets/img/header/axalphalogo.jpg') }}" class="img-responsive img-circle" alt="Responsive image">
-                    </div>
-                    <div class="menuContent col-xs-12 col-md-10 col-lg-10">
-                        <div class="center-block">
-                            <ul class="nav nav-pills">
-                              <li role="presentation"><a href="#">Home</a></li>
-                              <li role="presentation"><a href="#">Static2</a></li>
-                              <li role="presentation" class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                  Dropdown <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                  <li role="presentation"><a href="#">Static22</a></li>
+                    <div class="row ">
+                        <div class="logoImage col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                            <img src="{{ asset('assets/img/header/axalphalogo.jpg') }}" class="img-responsive img-circle" alt="Responsive image">
+                        </div>
+                        <div class="menuContent col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                            <div class="center-block">
+                                <ul class="nav nav-pills">
+                                  <li role="presentation"><a href="{{ url('alex_static_pages_homepage')}}">Home</a></li>
+                                  <li role="presentation" class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                      Servicios <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                      <li role="presentation"><a href="{{ url('alex_static_pages_ecomerce')}}">E-commerce</a></li>
+                                      <li role="presentation"><a href="{{ url('alex_static_pages_medida')}}">A medida</a></li>
+                                      <li role="presentation"><a href="{{ url('alex_static_pages_integration')}}">Integración de sistemas</a></li>
+                                    </ul>
+                                  </li>
+                                  <li role="presentation"><a href="#">Contacta</a></li>                             
                                 </ul>
-                              </li>
-                              <li role="presentation"><a href="#">Static3</a></li>
-                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="headerbottom" class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <ol class="breadcrumb">
+                                <li><a href="#">Pruebas</a></li>
+                              
+                                {% for breadcrumb in breadcrumbs %}
+                                    <li><a href="{{ url(breadcrumb[1]) }}"></a>{{ breadcrumb[0] }}</li>
+                                {% endfor %}
+                              
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -43,10 +61,61 @@
                     
                 </div>
                 <div id="footer" class="row">
+                    <div id="foot_col_left" class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                        <div class="container-fluid">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.4475622407467!2d2.072895415382243!3d41.36435990538533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49967b8061e63%3A0x45d47aaabacd85ac!2sCarrer+de+Josep+Feliu+i+Codina%2C+3%2C+08940+Cornell%C3%A0+de+Llobregat%2C+Barcelona!5e0!3m2!1ses!2ses!4v1473678536983" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div id="foot_col_right" class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="media">
+                                  <div class="media-left">
+                                    <a href="#">
+                                      <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    </a>
+                                  </div>
+                                  <div class="media-body">
+                                    <h4 class="media-heading">Dirección</h4>
+                                    <p>Calle Feliu i Codina,3</p>
+                                    <p>Cornella de Llobregat</p>
+                                    <p>Barcelona, 08940</p>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="media">
+                                  <div class="media-left">
+                                    <a href="#">
+                                      <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                    </a>
+                                  </div>
+                                  <div class="media-body">
+                                    <h4 class="media-heading">Correo</h4>
+                                    <p>alexandre.ortigosa@gmail.com</p>
+                                  </div>
+                                </div>
+                                <div class="media">
+                                  <div class="media-left">
+                                    <a href="#">
+                                      <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                                    </a>
+                                  </div>
+                                  <div class="media-body">
+                                    <h4 class="media-heading">Teléfono</h4>
+                                    <p>+34 638 41 99 29</p>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
             </div>
-            <div id="colum_right" class="col-md-1 col-lg-1">
+            <div id="colum_right" class="col-sm-1 col-md-1 col-lg-1">
             </div>
         </div>
+        {% block customjs %}
+       {% endblock %}
+
     </body>
 </html>

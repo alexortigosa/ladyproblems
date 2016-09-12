@@ -4,14 +4,25 @@ body{
 #page{
 	background:black;
 	margin-top: 1%;
+	margin-bottom: 1%;
 	}
 #center_column{
 	background: white;
 	padding-right: 2%;
 	padding-left: 2%;
 }
-
+/*
+	HEADER
+*/
 #header{
 	padding-bottom: 20px;
 	padding-top: 20px;
+}
+#headerbottom{
+	margin-top: 1%;
+}
+
+#footer{
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
