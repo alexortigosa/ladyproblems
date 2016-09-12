@@ -59,6 +59,7 @@ class DefaultController extends Controller
     	}
     	else
     		if(array_key_exists($key,$this->BREADCRUM["servicios"])){
+    			array_push($ret, array("servicios","#"));
     			array_push($ret, $this->BREADCRUM["servicios"][$key]);
     		}
     	return $ret;;

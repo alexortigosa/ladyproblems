@@ -44,12 +44,9 @@
                     <div id="headerbottom" class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <ol class="breadcrumb">
-                                <li><a href="#">Pruebas</a></li>
-                              
                                 {% for breadcrumb in breadcrumbs %}
-                                    <li><a href="{{ url(breadcrumb[1]) }}"></a>{{ breadcrumb[0] }}</li>
+                                    <li><a href="{% if breadcrumb[1] != "#" %}{{ url(breadcrumb[1]) }}{% else %}#{% endif %}"></a>{{ breadcrumb[0] }}</li>
                                 {% endfor %}
-                              
                             </ol>
                         </div>
                     </div>
