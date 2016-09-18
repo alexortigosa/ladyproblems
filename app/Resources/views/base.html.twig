@@ -2,13 +2,12 @@
 <html>
     <head>
        <title>{% block title %}Alex Ortigosa Web{% endblock %}</title>
-        <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('assets/global.css') }}"/>
 
-        <script type="text/javascript" src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('assets/vendor/jquery/dist/jquery.slim.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+
        {% block customcss %}
+           <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}"/>
+           <link rel="stylesheet" href="{{ asset('assets/global.css') }}"/>
        {% endblock %}
     </head>
             
@@ -20,7 +19,9 @@
                 <div id="header" class="row">
                     <div class="row ">
                         <div class="logoImage col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                            <img src="{{ asset('assets/img/header/axalphalogo.jpg') }}" class="img-responsive img-circle" alt="Responsive image">
+                            <div class="center-block">
+                                <img src="{{ asset('assets/img/header/aolog.png') }}" class="img-responsive" alt="Responsive image">
+                            </div>
                         </div>
                         <div class="menuContent col-xs-12 col-sm-12 col-md-10 col-lg-10">
                             <div class="center-block">
@@ -28,7 +29,7 @@
                                   <li role="presentation"><a href="{{ url('alex_static_pages_homepage')}}">Home</a></li>
                                   <li role="presentation" class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                      Servicios <span class="caret"></span>
+                                        {% trans from "trans"%}Servicios{% endtrans %} <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
                                       <li role="presentation"><a href="{{ url('alex_static_pages_ecomerce')}}">E-commerce</a></li>
@@ -112,6 +113,9 @@
             </div>
         </div>
         {% block customjs %}
+            <script type="text/javascript" src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/jquery/dist/jquery.slim.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
        {% endblock %}
 
     </body>

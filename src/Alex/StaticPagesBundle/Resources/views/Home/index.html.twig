@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
 {% block title %} Alex Ortigosa Web - Home {% endblock %}
+{% block customcss %}
+    {{ parent() }}
+	<link rel="stylesheet" href="{{ asset('assets/css/home.css') }}"/>
+{% endblock %}
+{% block customjs %}
+    {{ parent() }}
+{% endblock %}
 {% block contenido %}
 	<div id="slider" class="row container-fluid">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -14,7 +21,7 @@
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 		    <div class="item active">
-		      <img src="{{ asset('assets/img/infoblock/ecommerceSlide.jpg') }}" class="img-responsive" alt="Chania">
+		      <img src="{{ asset('assets/img/infoblock/ecommerceSlide.jpg') }}" class="img-responsive imageslide" alt="Chania">
 		      <div class="carousel-caption">
 		        <h3>Chania</h3>
 		        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -57,8 +64,60 @@
 		  </a>
 		</div>
 	</div>
-	<div id="servicios" class="row container-fluid">
-		<div class="row">
+	<div id="servicios" class="row container-fluid ">
+
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2 class="panel-title text-center" >Servicios</h2>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<div class="thumbnail infoblock">
+						      <img src="{{ asset('assets/img/infoblock/tec.jpg') }}" alt="...">
+						      <div class="caption">
+						        <h3>E-commerce</h3>
+						        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis mi lacus, et tristique ligula sagittis at. Donec eget leo eu augue aliquet viverra. Etiam fermentum molestie venenatis. Nam ac semper ipsum. Suspendisse bibendum tellus ac turpis hendrerit semper. Aenean dictum cursus malesuada. Duis ultrices luctus elit nec tempus. Vestibulum ultricies mattis neque eu egestas. Duis in tincidunt est. Proin pellentesque eget ante feugiat ultrices. Ut ut nunc est.</p>
+						        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+						      </div>
+						    </div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<div class="thumbnail infoblock">
+						      <img src="{{ asset('assets/img/infoblock/tec.jpg') }}" alt="...">
+						      <div class="caption">
+						        <h3>Integración de sistemas</h3>
+						        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis mi lacus, et tristique ligula sagittis at. Donec eget leo eu augue aliquet viverra. Etiam fermentum molestie venenatis. Nam ac semper ipsum. Suspendisse bibendum tellus ac turpis hendrerit semper. Aenean dictum cursus malesuada. Duis ultrices luctus elit nec tempus. Vestibulum ultricies mattis neque eu egestas. Duis in tincidunt est. Proin pellentesque eget ante feugiat ultrices. Ut ut nunc est</p>
+						        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+						      </div>
+						    </div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<div class="thumbnail infoblock">
+						      <img src="{{ asset('assets/img/infoblock/tec.jpg') }}" alt="...">
+						      <div class="caption">
+						        <h3>Programación a medida</h3>
+						        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis mi lacus, et tristique ligula sagittis at. Donec eget leo eu augue aliquet viverra. Etiam fermentum molestie venenatis. Nam ac semper ipsum. Suspendisse bibendum tellus ac turpis hendrerit semper. Aenean dictum cursus malesuada. Duis ultrices luctus elit nec tempus. Vestibulum ultricies mattis neque eu egestas. Duis in tincidunt est. Proin pellentesque eget ante feugiat ultrices. Ut ut nunc est.</p>
+						        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+						      </div>
+						    </div>
+						</div>
+						<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+							<div class="thumbnail infoblock">
+						      <img src="{{ asset('assets/img/infoblock/tec.jpg') }}" alt="...">
+						      <div class="caption">
+						        <h3>Paginas Estáticas</h3>
+						        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis mi lacus, et tristique ligula sagittis at. Donec eget leo eu augue aliquet viverra. Etiam fermentum molestie venenatis. Nam ac semper ipsum. Suspendisse bibendum tellus ac turpis hendrerit semper. Aenean dictum cursus malesuada. Duis ultrices luctus elit nec tempus. Vestibulum ultricies mattis neque eu egestas. Duis in tincidunt est. Proin pellentesque eget ante feugiat ultrices. Ut ut nunc est.</p>
+						        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+						      </div>
+						    </div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<div class="row">
 			<div class="col-xs-12 col-md-12 col-lg-12" >
 					<h1 class="text-center">Nuestros servicios<h1/>
 			</div>
@@ -121,7 +180,7 @@
 			  		<li class="list-group-item text-center">Porta ac consectetur ac</li>
 			  		<li class="list-group-item text-center">Vestibulum at eros</li>
 				</ul>
-			</div>-->
-		</div>
+			</div>
+		</div>-->
 	</div>
 {% endblock %}

@@ -3,6 +3,7 @@
 namespace Alex\StaticPagesBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -16,8 +17,9 @@ class DefaultController extends Controller
 		"contacto" => array("Contacto",""),
 		);
 
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        $request->setLocale('es');
         return $this->render('AlexStaticPagesBundle:Home:index.html.twig',
         	array("breadcrumbs" => $this->getBreadCrumb("home")));
     }
