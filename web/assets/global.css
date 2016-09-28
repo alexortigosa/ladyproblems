@@ -2,8 +2,10 @@ body{
 
 }
 #page{
+	/*
 	margin-top: 1%;
 	margin-bottom: 1%;
+	*/
 	}
 #center_column{
 	background: white;
@@ -19,7 +21,7 @@ body{
 	padding-top: 20px;
 }
 #headerbottom{
-	margin-top: 1%;
+	padding-top: 1%;
 }
 /*
 	CONTENT
@@ -34,6 +36,6 @@ body{
 
 #footer{
 	background: black;
-	margin-top: 1%;
-	margin-bottom: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
