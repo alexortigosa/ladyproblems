@@ -1,8 +1,7 @@
 body{
-	background:black;
+
 }
 #page{
-	background:black;
 	margin-top: 1%;
 	margin-bottom: 1%;
 	}
@@ -15,14 +14,26 @@ body{
 	HEADER
 */
 #header{
+	background: black;
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
 #headerbottom{
 	margin-top: 1%;
 }
+/*
+	CONTENT
+*/
+#content{
+	background: darkgray;
+}
+
+/*
+	BOOTOM
+*/
 
 #footer{
+	background: black;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
