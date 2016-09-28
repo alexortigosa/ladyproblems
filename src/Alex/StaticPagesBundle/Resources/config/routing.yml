@@ -10,3 +10,6 @@ alex_static_pages_medida:
 alex_static_pages_integration:
     path:     /servicios/integracion
     defaults: { _controller: AlexStaticPagesBundle:Default:integration }
+alex_static_pages_layout:
+    path:     /layout
+    defaults: { _controller: AlexStaticPagesBundle:Default:layout }
