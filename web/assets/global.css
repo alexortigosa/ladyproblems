@@ -34,9 +34,11 @@ body{
 	padding: 15px;
 	width: auto;
 }
-
+.nav-pills > li > a{
+	background: #ACEDED;
+}
 #headerbottom{
-	/*padding-top: 1%;*/
+	padding-top: 1%;
 }
 /*
 	CONTENT
@@ -51,7 +53,7 @@ body{
 
 #footer{
 	/*background: black;*/
-	background: #77D5D5;
+	/*background: #77D5D5;*/
 	padding-top: 1%;
 	padding-bottom: 1%;
 }
