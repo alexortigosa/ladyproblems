@@ -4,6 +4,7 @@
 
 
 body{
+	background: url("/img/background.png") cover;
 
 }
 #page{
@@ -24,23 +25,28 @@ body{
 	/*background: black;*/
 	background: #4EBABA;
 	/*padding-bottom: 20px;*/
-	padding-top: 1%;
+	padding-top: 2%;
 	margin-bottom: 1%;
 }
-
-.nav-pills > li > a{
-	background: #fff;
+.navbar-brand {
+	padding: 0px;
 }
-
-.nav-pills > li > a:hover{
+.navbar-brand>img {
+	height: 100%;
+	padding: 15px;
+	width: auto;
+}
+.nav-pills > li > a{
 	background: #ACEDED;
 }
-
 #headerbottom{
 	padding-top: 1%;
 }
-.menuContent{
-	/*margin-top: 1%;*/
+.dropdown-menu li a{
+	color: #168C8C;
+}
+.dropdown-menu li a:hover{
+	background: #4EBABA;
 }
 /*
 	CONTENT
@@ -55,7 +61,11 @@ body{
 
 #footer{
 	/*background: black;*/
-	/*background: #77D5D5;*/
+	background: #77D5D5;
 	padding-top: 1%;
 	padding-bottom: 1%;
+	color: white;
+}
+#foot_col_right .panel{
+	background: inherit !important;
 }
