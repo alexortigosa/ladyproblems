@@ -1,6 +1,6 @@
 {
   "vars": {
-    "@gray-base": "#000",
+    "@gray-base": "#fff",
     "@gray-darker": "lighten(@gray-base, 13.5%)",
     "@gray-dark": "lighten(@gray-base, 20%)",
     "@gray": "lighten(@gray-base, 33.5%)",
@@ -12,7 +12,7 @@
     "@brand-warning": "#77D5D5",
     "@brand-danger": "#ACEDED",
     "@body-bg": "#fff",
-    "@text-color": "@gray-dark",
+    "@text-color": "#000",
     "@link-color": "@brand-primary",
     "@link-hover-color": "darken(@link-color, 15%)",
     "@link-hover-decoration": "underline",
@@ -34,7 +34,7 @@
     "@headings-font-family": "inherit",
     "@headings-font-weight": "500",
     "@headings-line-height": "1.1",
-    "@headings-color": "inherit",
+    "@headings-color": "@brand-success",
     "@icon-font-path": "\"../fonts/\"",
     "@icon-font-name": "\"glyphicons-halflings-regular\"",
     "@icon-font-svg-id": "\"glyphicons_halflingsregular\"",
@@ -63,7 +63,7 @@
     "@table-bg-active": "@table-bg-hover",
     "@table-border-color": "#ddd",
     "@btn-font-weight": "normal",
-    "@btn-default-color": "#333",
+    "@btn-default-color": "#fff",
     "@btn-default-bg": "#fff",
     "@btn-default-border": "#ccc",
     "@btn-primary-color": "#fff",
@@ -103,7 +103,7 @@
     "@input-group-addon-bg": "@gray-lighter",
     "@input-group-addon-border-color": "@input-border",
     "@cursor-disabled": "not-allowed",
-    "@dropdown-bg": "#fff",
+    "@dropdown-bg": "@brand-danger",
     "@dropdown-border": "rgba(0,0,0,.15)",
     "@dropdown-fallback-border": "#ccc",
     "@dropdown-divider-bg": "#e5e5e5",
@@ -151,14 +151,14 @@
     "@navbar-default-border": "darken(@navbar-default-bg, 6.5%)",
     "@navbar-default-link-color": "#777",
     "@navbar-default-link-hover-color": "#333",
-    "@navbar-default-link-hover-bg": "transparent",
+    "@navbar-default-link-hover-bg": "@brand-success",
     "@navbar-default-link-active-color": "#555",
     "@navbar-default-link-active-bg": "darken(@navbar-default-bg, 6.5%)",
     "@navbar-default-link-disabled-color": "#ccc",
-    "@navbar-default-link-disabled-bg": "transparent",
+    "@navbar-default-link-disabled-bg": "@brand-success",
     "@navbar-default-brand-color": "@navbar-default-link-color",
     "@navbar-default-brand-hover-color": "darken(@navbar-default-brand-color, 10%)",
-    "@navbar-default-brand-hover-bg": "transparent",
+    "@navbar-default-brand-hover-bg": "@brand-success",
     "@navbar-default-toggle-hover-bg": "#ddd",
     "@navbar-default-toggle-icon-bar-bg": "#888",
     "@navbar-default-toggle-border-color": "#ddd",
@@ -431,5 +431,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=6ad2030beee440ec360a877e4353e65b"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=211d288d1f4248603237bb56aa27da8c"
 }

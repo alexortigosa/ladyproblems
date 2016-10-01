@@ -14,8 +14,8 @@ body{
 	}
 #center_column{
 	background: white;
-	padding-right: 2%;
-	padding-left: 2%;
+	/*padding-right: 2%;
+	padding-left: 2%;*/
 }
 /*
 	HEADER
@@ -23,11 +23,20 @@ body{
 #header{
 	/*background: black;*/
 	background: #4EBABA;
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
-#headerbottom{
+	/*padding-bottom: 20px;*/
 	padding-top: 1%;
+}
+.navbar-brand {
+	padding: 0px;
+}
+.navbar-brand>img {
+	height: 100%;
+	padding: 15px;
+	width: auto;
+}
+
+#headerbottom{
+	/*padding-top: 1%;*/
 }
 /*
 	CONTENT
