@@ -40,6 +40,12 @@ body{
 #headerbottom{
 	padding-top: 1%;
 }
+.dropdown-menu li a{
+	color: #168C8C;
+}
+.dropdown-menu li a:hover{
+	background: #4EBABA;
+}
 /*
 	CONTENT
 */
