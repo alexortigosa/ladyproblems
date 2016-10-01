@@ -12,6 +12,7 @@ body{
 	margin-top: 1%;
 	margin-bottom: 1%;
 	*/
+
 	}
 #center_column{
 	background: white;
@@ -25,7 +26,8 @@ body{
 	/*background: black;*/
 	background: #4EBABA;
 	/*padding-bottom: 20px;*/
-	padding-top: 1%;
+	padding-top: 2%;
+	margin-bottom: 1%;
 }
 .navbar-brand {
 	padding: 0px;
@@ -63,4 +65,8 @@ body{
 	background: #77D5D5;
 	padding-top: 1%;
 	padding-bottom: 1%;
+	color: white;
+}
+#foot_col_right .panel{
+	background: inherit !important;
 }
