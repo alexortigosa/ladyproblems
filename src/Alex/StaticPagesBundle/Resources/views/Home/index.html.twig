@@ -7,6 +7,9 @@
 {% block customjs %}
     {{ parent() }}
 {% endblock %}
+{% block slider %}
+	{% include 'slider/slider.html.twig' %}
+{% endblock %}
 {% block contenido %}
 
 	<div id="servicios" class="row container-fluid ">
