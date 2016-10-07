@@ -28,15 +28,15 @@
                     <div class="menuContent col-xs-12 col-sm-12 col-md-10 col-lg-10">
                         <div class="center-block">
                             <ul class="nav nav-pills" role="navigation">
-                                <li role="presentation"><a href="{{ url('alex_static_pages_homepage')}}">Home</a></li>
+                                <li role="presentation"><a id="buttonhome" href="{{ url('alex_static_pages_homepage')}}">Home</a></li>
                                 <li role="presentation" class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                         {% trans from "trans"%}Servicios{% endtrans %} <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li role="presentation"><a href="{{ url('alex_static_pages_ecomerce')}}">E-commerce</a></li>
-                                        <li role="presentation"><a href="{{ url('alex_static_pages_medida')}}">A medida</a></li>
-                                        <li role="presentation"><a href="{{ url('alex_static_pages_integration')}}">Integración de sistemas</a></li>
+                                        <li role="presentation"><a id="buttoncommerce" href="{{ url('alex_static_pages_ecomerce')}}">E-commerce</a></li>
+                                        <li role="presentation"><a id="buttonmedida" href="{{ url('alex_static_pages_medida')}}">A medida</a></li>
+                                        <li role="presentation"><a id="buttonintegracion" href="{{ url('alex_static_pages_integration')}}">Integración de sistemas</a></li>
                                     </ul>
                                 </li>
                                 <li role="presentation"><a href="#">Contacta</a></li>

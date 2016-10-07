@@ -20,3 +20,14 @@
 #mapsiframe{
 	width: 100%;
 }
+#buttonhome{
+    background: #77D5D5;
+}
+
+.serviceimage{
+	height: 170px !important;
+}
+
+small{
+	color: lightgray;
+}
