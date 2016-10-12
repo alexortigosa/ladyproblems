@@ -1,3 +1,15 @@
 #buttoncontact{
     background: #77D5D5;
 }
+
+#formcontact{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#formcontact input{
+    color: black !important;
+}
+#formcontact textarea{
+    color: black !important;
+}
