@@ -13,3 +13,6 @@ alex_static_pages_integration:
 alex_static_pages_layout:
     path:     /layout
     defaults: { _controller: AlexStaticPagesBundle:Default:layout }
+alex_static_pages_contact:
+    path:     /contacto
+    defaults: { _controller: AlexStaticPagesBundle:Default:contact }

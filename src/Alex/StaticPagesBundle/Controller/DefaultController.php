@@ -43,6 +43,11 @@ class DefaultController extends Controller
         return $this->render('AlexStaticPagesBundle:Home:layout.html.twig',
             array("breadcrumbs" => $this->getBreadCrumb("integration")));
     }
+    public function contactAction()
+    {
+        return $this->render('AlexStaticPagesBundle:contacto:contact.html.twig',
+            array("breadcrumbs" => $this->getBreadCrumb("integration")));
+    }
 
     private function getBreadCrumb($key){
 
