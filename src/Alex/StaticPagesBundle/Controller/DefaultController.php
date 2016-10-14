@@ -2,8 +2,10 @@
 
 namespace Alex\StaticPagesBundle\Controller;
 
+use Alex\StaticPagesBundle\Entity\Contact;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Alex\StaticPagesBundle\Form\ContactType;
 
 class DefaultController extends Controller
 {
@@ -44,36 +46,56 @@ class DefaultController extends Controller
     }
     public function contactAction()
     {
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class,$contact,array(
+            'action' => $this->generateUrl('alex_static_pages_contact_post'),
+            'method' => 'POST'
+        ));
         return $this->render('AlexStaticPagesBundle:contacto:contact.html.twig',
-            array("breadcrumbs" => $this->getBreadCrumb("integration")));
+            array(
+                "form" => $form->createView(),
+                "breadcrumbs" => $this->getBreadCrumb("integration"))
+        );
+    }
+    public function contactpostAction(Request $request)
+    {
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class,$contact);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // $form->getData() holds the submitted values
+            // but, the original `$task` variable has also been updated
+            $contact = $form->getData();
+
+            // ... perform some action, such as saving the task to the database
+            // for example, if Task is a Doctrine entity, save it!
+            // $em = $this->getDoctrine()->getManager();
+            // $em->persist($task);
+            // $em->flush();
+
+            return $this->redirectToRoute('alex_static_pages_contact_succes');
+        }
+        else return $this->redirectToRoute('alex_static_pages_contact_fail');
+
+        return $this->render('AlexStaticPagesBundle:Home:index.html.twig',
+            array("breadcrumbs" => $this->getBreadCrumb("home")));
+    }
+    public function formsuccesAction(){
+        return $this->render('AlexStaticPagesBundle:contacto:succesform.html.twig');
+    }
+    public function formfailedAction(){
+        return $this->render('AlexStaticPagesBundle:contacto:failedform.html.twig');
     }
 
     private function getBreadCrumb($key){
-
     	$ret = array();
-    	/*if(array_key_exists($key,$this->BREADCRUM))
-    	{
-
-    		return "<li class='active'><a href='".$this->get('router')->generate($this->BREADCRUM[$key][1])."'>".$this->BREADCRUM[$key][0]."</a></li>";	
-    	}
-    	else
-    		if(array_key_exists($key,$this->BREADCRUM["servicios"])){
-    			return "<li><a href='#'>servicios</a></li>
-    					<li><a href='".$this->get('router')->generate($this->BREADCRUM["servicios"][$key][1])."'>".$this->BREADCRUM["servicios"][$key][0]."</a></li>";
-    		}
-    	return "<li><a href='#'>Not muctch</a></li>";*/
-
     	if(array_key_exists($key,$this->BREADCRUM))
-    	{
-
     		array_push($ret, $this->BREADCRUM[$key]);
-    	}
     	else
     		if(array_key_exists($key,$this->BREADCRUM["servicios"])){
     			array_push($ret, array("servicios","#"));
     			array_push($ret, $this->BREADCRUM["servicios"][$key]);
     		}
     	return $ret;;
-
     }
 }

@@ -7,9 +7,6 @@
     padding-bottom: 2%;
 }
 
-#formcontact input{
-    color: black !important;
-}
-#formcontact textarea{
+.form-control{
     color: black !important;
 }

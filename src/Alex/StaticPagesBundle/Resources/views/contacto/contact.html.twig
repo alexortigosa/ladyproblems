@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %} Alex Ortigosa Web - Home {% endblock %}
+{% block title %} Alex Ortigosa Web - Contacto {% endblock %}
 {% block customcss %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('assets/css/contacto.css') }}"/>
@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <form id="formcontact" method="post" action="#" class="form-horizontal">
+            <!--<form id="formcontact" method="post" action="#" class="form-horizontal">
                 <div class="form-group">
                     <label for="email" class="col-lg-2 col-md-2 col-sm-12 col-xs-12">Email</label>
                     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
@@ -35,7 +35,11 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
+            </form>-->
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
 
 
         </div>

@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
-{% block title %} Alex Ortigosa Web - E-commerce {% endblock %}
+{% block title %} Alex Ortigosa Web - Sistemas E-commerce {% endblock %}
 {% block customcss %}
 	{{ parent() }}
 	<link rel="stylesheet" href="{{ asset('assets/css/ecom.css') }}"/>
 {% endblock %}
-	{% block contenido %}
+{% block contenido %}
 	<div class="row">
 		<div class="page-header">
 			<h1>Ecommerce <small style="color: #2ed2d2;">Tu solución de venta online</small></h1>
@@ -14,66 +14,92 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="row">
 				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-					<a href="#grafocom" class="thumbnail">
+					<a href="javascript:goToGraph();" class="thumbnail">
 						<img class="img-responsive logocomerc"  src="{{ asset('assets/img/ecomm/magento.png') }}" alt="magento e-commerce">
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-					<a href="#grafocom" class="thumbnail">
+					<a href="javascript:goToGraph();" class="thumbnail">
 						<img class="img-responsive logocomerc" src="{{ asset('assets/img/ecomm/ps.png') }}" alt="Prestashop e-commerce">
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-					<a href="#grafocom" class="thumbnail">
+					<a href="javascript:goToGraph();" class="thumbnail">
 						<img class="img-responsive logocomerc" src="{{ asset('assets/img/ecomm/woo.png') }}" alt="Woocommerce e-commerce">
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-					<a href="#grafocom" class="thumbnail">
+					<a href="javascript:goToGraph();" class="thumbnail">
 						<img class="img-responsive logocomerc" src="{{ asset('assets/img/ecomm/os.jpg') }}" alt="OsCommerce e-commerce">
 					</a>
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h2>Que es?</h2>
-			<p class="text-justify">
-				Podemos definirlos como aquellos sistemas que permiten cualquier tipo de operación comercial, en la que la transacción se realiza mediante algún sistema de comunicación electrónica, por lo que no requiere de “contacto físico” entre comprador y vendedor (E. Balado, Ideaspropias Editorial SL, 2005).
-			</p>
-			<p class="text-justify">
-				Existen muchas definiciones para <strong>e-Commerce</strong> diferentes a la anteriormente mencionada, otra de las más populares y empleadas es: “El estudio de la posibilidad de hacer transacciones electrónicas entre dos o más organizaciones o individuos” (Laudon and Traver 2003).
-			</p>
-			<p class="text-justify">
-				El comercio electrónico es una modalidad de comercio joven. Los primeros indicios provienen de 1948, en aquel entonces se realizaban campañas de ventas por medio de catálogos enviados por carta. Hasta los años 70, las empresas financieras no estandarizaron su uso, iniciando una fuerte expansión a partir de los años 90, debido a la aparición de nuevas tecnologías de la información y la comunicación, con ello surgieron nuevos nichos de mercados.
-			</p>
-			<p class="text-justify">
-				Según Illanes (1999), “…la tarea encomendada al comercio electrónico permite utilizar la tecnología como un medio para obtener ventajas importantes sobre la competencia. De manera que el <strong>e-Commerce</strong> permite replantear los objetivos en la empresa con un claro direccionamiento estratégico, facilitando crear nuevos productos y mercados, nuevos canales de distribución, reducir el coste de las actividades empresariales y favorecer la apertura de nuevos mercados”
-				11
-				(Fernández Portillo, A., Sánchez Escobedo, M. C., Hernández Mogollón, R., & Jiménez Naranjo, H. V. (2015)). Mediante el <strong>e-Commerce</strong> también podemos obtener una gran cantidad de información relevante sobre el negocio. Por lo que nos facilitará la toma de decisiones acertadas y nos dará ventaja sobre los competidores en la prestación de servicios a los clientes.
-			</p>
-		</div>
-		<div id="grafocom" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<h3>Uso de los diferentes sistemas E-commerce existentes</h3>
+		<div id="myTabs" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#quees" aria-controls="quees" role="tab" data-toggle="tab"><h2>Que es E-commerce?</h2></a></li>
+				<li role="presentation"><a href="#grafo" aria-controls="grafo" role="tab" data-toggle="tab"><h2>Uso de los diferent sistemas E-commerce</h2></a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="quees">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<p class="text-justify">
+							Podemos definirlos como aquellos sistemas que permiten cualquier tipo de operación comercial, en la que la transacción se realiza mediante algún sistema de comunicación electrónica, por lo que no requiere de “contacto físico” entre comprador y vendedor (E. Balado, Ideaspropias Editorial SL, 2005).
+						</p>
+						<p class="text-justify">
+							Existen muchas definiciones para <strong>e-Commerce</strong> diferentes a la anteriormente mencionada, otra de las más populares y empleadas es: “El estudio de la posibilidad de hacer transacciones electrónicas entre dos o más organizaciones o individuos” (Laudon and Traver 2003).
+						</p>
+						<p class="text-justify">
+							El comercio electrónico es una modalidad de comercio joven. Los primeros indicios provienen de 1948, en aquel entonces se realizaban campañas de ventas por medio de catálogos enviados por carta. Hasta los años 70, las empresas financieras no estandarizaron su uso, iniciando una fuerte expansión a partir de los años 90, debido a la aparición de nuevas tecnologías de la información y la comunicación, con ello surgieron nuevos nichos de mercados.
+						</p>
+						<p class="text-justify">
+							Según Illanes (1999), “…la tarea encomendada al comercio electrónico permite utilizar la tecnología como un medio para obtener ventajas importantes sobre la competencia. De manera que el <strong>e-Commerce</strong> permite replantear los objetivos en la empresa con un claro direccionamiento estratégico, facilitando crear nuevos productos y mercados, nuevos canales de distribución, reducir el coste de las actividades empresariales y favorecer la apertura de nuevos mercados”
+							11
+							(Fernández Portillo, A., Sánchez Escobedo, M. C., Hernández Mogollón, R., & Jiménez Naranjo, H. V. (2015)). Mediante el <strong>e-Commerce</strong> también podemos obtener una gran cantidad de información relevante sobre el negocio. Por lo que nos facilitará la toma de decisiones acertadas y nos dará ventaja sobre los competidores en la prestación de servicios a los clientes.
+						</p>
+					</div>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
-					<img id="grafoimage" class="img-responsive" src="{{ asset('assets/img/ecomm/grafecom2.png') }}"/>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<p class="text-justify">
-						Hemos realizado un estudio sobre cuales de los sistemas <strong>e-Commerce</strong> standarizados tienen mas uso en el ambito Español. Nuestros programadores son expertos en los 3 sistemas más utilizados
-						del mercado. Según su volumen de negoció una de estas carácteristicas se adaptará de manera mas exacta a su caso. Nosotros le guiaremos en todo el proceso para la selección de uno de estos sistemas.
-					</p>
-					<p class="text-justify">
-						Estos sitemas són ideales para abaratar costes. Ya que el desarrollo de un sistema a medida aumentaría considerablemente en relación al coste de adaptación de un sistema estandarizado a su modelo de negocio.
-					</p>
+				<div role="tabpanel" class="tab-pane" id="grafo">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+						<img id="grafoimage" class="img-responsive" src="{{ asset('assets/img/ecomm/grafecom2.png') }}"/>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<p class="text-justify">
+							Hemos realizado un estudio sobre cuales de los sistemas <strong>e-Commerce</strong> standarizados tienen mas uso en el ambito Español. Nuestros programadores son expertos en los 3 sistemas más utilizados
+							del mercado. Según su volumen de negoció una de estas carácteristicas se adaptará de manera mas exacta a su caso. Nosotros le guiaremos en todo el proceso para la selección de uno de estos sistemas.
+						</p>
+						<p class="text-justify">
+							Estos sitemas són ideales para abaratar costes. Ya que el desarrollo de un sistema a medida aumentaría considerablemente en relación al coste de adaptación de un sistema estandarizado a su modelo de negocio.
+						</p>
+					</div>
 				</div>
 			</div>
-
-
-
 		</div>
     </div>
 
+{% endblock %}
+{% block customjs %}
+	{{ parent() }}
+	<script>
+		$(document).ready(function(){
+			euqalHeightintabs();
+		});
+		function goToGraph(){
+			$('#myTabs li:eq(1) a').tab('show');
+		}
+		function euqalHeightintabs(){
+			var maxHeight=0;
+			$("#myTabs .tab-pane").each(function () {
+				var tabHeight=$(this).height();
+				if(tabHeight>maxHeight)
+					maxHeight=tabHeight;
+			});
+			$("#myTabs .tab-pane").each(function () {
+				$(this).height(maxHeight);
+			});
+
+		}
+	</script>
 {% endblock %}

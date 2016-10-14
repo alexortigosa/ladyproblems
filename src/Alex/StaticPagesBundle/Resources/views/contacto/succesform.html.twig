@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %} Alex Ortigosa Web - Contacto {% endblock %}
+{% block customcss %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/contacto.css') }}"/>
+{% endblock %}
+{% block customjs %}
+    {{ parent() }}
+{% endblock %}
+{% block contenido %}
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 jumbotron">
+            <h1>Se ha realizado correctamente</h1>
+        </div>
+    </div>
+{% endblock %}
