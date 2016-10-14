@@ -21,7 +21,7 @@ alex_static_pages_contact_post:
     defaults: { _controller: AlexStaticPagesBundle:Default:contactpost }
 alex_static_pages_contact_succes:
     path:     /contacto/succes
-    defaults: { _controller: AlexStaticPagesBundle:Default:Default:formsucces }
+    defaults: { _controller: AlexStaticPagesBundle:Default:formsucces }
 alex_static_pages_contact_fail:
     path:     /contacto/fail
-    defaults: { _controller: AlexStaticPagesBundle:Default:Default:formfailed }
+    defaults: { _controller: AlexStaticPagesBundle:Default:formfailed }

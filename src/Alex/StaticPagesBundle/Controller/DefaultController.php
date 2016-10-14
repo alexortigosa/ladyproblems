@@ -16,7 +16,7 @@ class DefaultController extends Controller
 			'integration' => array('Integración',"alex_static_pages_integration"),
 			'medida' => array('A medida',"alex_static_pages_medida"),
 			),
-		"contacto" => array("Contacto",""),
+		"contacto" => array("Contacto","alex_static_pages_contact"),
 		);
 
     public function indexAction(Request $request)
@@ -44,17 +44,37 @@ class DefaultController extends Controller
         return $this->render('AlexStaticPagesBundle:Home:layout.html.twig',
             array("breadcrumbs" => $this->getBreadCrumb("integration")));
     }
-    public function contactAction()
+    public function contactAction(Request $request)
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class,$contact,array(
-            'action' => $this->generateUrl('alex_static_pages_contact_post'),
+            //'action' => $this->generateUrl('alex_static_pages_contact_post'),
             'method' => 'POST'
         ));
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            $contact = $form->getData();
+            $validator = $this->get('validator');
+            $errors = $validator->validate($contact);
+            if (count($errors) > 0) {
+                return $this->render('AlexStaticPagesBundle:contacto:contact.html.twig',
+                    array(
+                        "form" => $form->createView(),
+                        'errors' => $errors,
+                        "breadcrumbs" => $this->getBreadCrumb("contacto"))
+                );
+            }
+            else {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($contact);
+                $em->flush();
+                return $this->redirectToRoute('alex_static_pages_contact_succes');
+            }
+        }
         return $this->render('AlexStaticPagesBundle:contacto:contact.html.twig',
             array(
                 "form" => $form->createView(),
-                "breadcrumbs" => $this->getBreadCrumb("integration"))
+                "breadcrumbs" => $this->getBreadCrumb("contacto"))
         );
     }
     public function contactpostAction(Request $request)
@@ -62,18 +82,23 @@ class DefaultController extends Controller
         $contact = new Contact();
         $form = $this->createForm(ContactType::class,$contact);
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted()) {
             // $form->getData() holds the submitted values
             // but, the original `$task` variable has also been updated
             $contact = $form->getData();
+            $validator = $this->get('validator');
+            $errors = $validator->validate($contact);
 
-            // ... perform some action, such as saving the task to the database
+            if (count($errors) > 0) {
+                $errorsString = (string)$errors;
+             }
             // for example, if Task is a Doctrine entity, save it!
             // $em = $this->getDoctrine()->getManager();
             // $em->persist($task);
             // $em->flush();
-
-            return $this->redirectToRoute('alex_static_pages_contact_succes');
+            return $this->render('AlexStaticPagesBundle:contacto:contact.html.twig',array(
+                'errors' => $errors,
+                'breadcrumbs' => $this->getBreadCrumb('contacto')));
         }
         else return $this->redirectToRoute('alex_static_pages_contact_fail');
 
@@ -81,10 +106,10 @@ class DefaultController extends Controller
             array("breadcrumbs" => $this->getBreadCrumb("home")));
     }
     public function formsuccesAction(){
-        return $this->render('AlexStaticPagesBundle:contacto:succesform.html.twig');
+        return $this->render('AlexStaticPagesBundle:contacto:succesform.html.twig',array("breadcrumbs" => $this->getBreadCrumb("contacto")));
     }
     public function formfailedAction(){
-        return $this->render('AlexStaticPagesBundle:contacto:failedform.html.twig');
+        return $this->render('AlexStaticPagesBundle:contacto:failedform.html.twig',array("breadcrumbs" => $this->getBreadCrumb("contacto")));
     }
 
     private function getBreadCrumb($key){
