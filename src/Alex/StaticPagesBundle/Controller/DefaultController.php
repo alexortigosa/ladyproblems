@@ -19,7 +19,6 @@ class DefaultController extends Controller
 
     public function indexAction(Request $request)
     {
-        $request->setLocale('es');
         return $this->render('AlexStaticPagesBundle:Home:index.html.twig',
         	array("breadcrumbs" => $this->getBreadCrumb("home")));
     }
