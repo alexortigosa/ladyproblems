@@ -10,3 +10,7 @@
 .form-control{
     color: black !important;
 }
+
+form label{
+    color: #2ed2d2 !important;
+}

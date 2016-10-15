@@ -4,7 +4,8 @@
 
 
 body{
-	background: url("/img/background.png") cover;
+	background: url("/img/background.png");
+	padding-top: 50px;
 
 }
 #page{
@@ -23,10 +24,14 @@ body{
 */
 #header{
 	/*background: black;*/
-	background: #4EBABA;
-	/*padding-bottom: 20px;*/
+	/*background: #4EBABA;
+	/*padding-bottom: 20px;
 	padding-top: 2%;
-	margin-bottom: 1%;
+	margin-bottom: 1%;*/
+
+}
+#menunav{
+    margin-bottom: 0px;
 }
 .navbar-brand {
 	padding: 0px;
@@ -36,6 +41,7 @@ body{
 	padding: 15px;
 	width: auto;
 }
+/*
 .nav-pills > li > a{
 	background: #ACEDED;
 }
@@ -48,6 +54,7 @@ body{
 .dropdown-menu li a:hover{
 	background: #4EBABA;
 }
+*/
 /*
 	CONTENT
 */
