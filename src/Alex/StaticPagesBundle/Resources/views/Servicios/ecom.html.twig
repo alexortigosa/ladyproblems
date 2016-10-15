@@ -83,9 +83,6 @@
 {% block customjs %}
 	{{ parent() }}
 	<script>
-		$(document).ready(function(){
-			euqalHeightintabs();
-		});
 		function goToGraph(){
 			$('#myTabs li:eq(1) a').tab('show');
 		}
@@ -102,4 +99,8 @@
 
 		}
 	</script>
+{% endblock %}
+{% block jsready %}
+    euqalHeightintabs();
+    selectedMenuSer("buttonservice");
 {% endblock %}

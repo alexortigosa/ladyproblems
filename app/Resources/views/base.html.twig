@@ -60,9 +60,9 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="active"><a href="{{ url('alex_static_pages_homepage')}}">Home<span class="sr-only">(current)</span></a></li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans from "trans"%}Servicios{% endtrans %} <span class="caret"></span></a>
+                                    <li id="buttonhome" ><a href="{{ url('alex_static_pages_homepage')}}">Home</a></li>
+                                    <li id="buttonservice" class="dropdown">
+                                        <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans from "trans"%}Servicios{% endtrans %} <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="{{ url('alex_static_pages_ecomerce')}}">E-commerce</a></li>
                                             <li role="separator" class="divider"></li>
@@ -71,8 +71,8 @@
                                             <li><a href="{{ url('alex_static_pages_integration')}}">Integración de sistemas</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ url('alex_static_pages_contact')}}">Sobre nosotros</a></li>
-                                    <li><a href="{{ url('alex_static_pages_contact')}}">Contacta</a></li>
+                                    <li id="buttonquien"><a  href="{{ url('alex_static_pages_contact')}}">Sobre nosotros</a></li>
+                                    <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">Contacta</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
@@ -214,6 +214,18 @@
 
             <script type="text/javascript" src="{{ asset('assets/boots/js/bootstrap.js') }}"></script>
        {% endblock %}
+        <script>
+            $(document).ready(function(){
+                {% block jsready %}
+
+                {% endblock %}
+            });
+
+            function selectedMenuSer(id) {
+                $("#"+id).addClass("active");
+                $("#"+id+" a").append("<span class='sr-only'>(current)</span>");
+            }
+        </script>
 
     </body>
 </html>
