@@ -60,19 +60,19 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li id="buttonhome" ><a href="{{ url('alex_static_pages_homepage')}}">Home</a></li>
+                                    <li id="buttonhome" ><a href="{{ url('alex_static_pages_homepage')}}">{% trans from "trans"%}Inicio{% endtrans %}</a></li>
                                     <li id="buttonservice" class="dropdown">
                                         <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans from "trans"%}Servicios{% endtrans %} <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="{{ url('alex_static_pages_ecomerce')}}">E-commerce</a></li>
+                                            <li><a href="{{ url('alex_static_pages_ecomerce')}}">{% trans from "trans"%}E-commerce{% endtrans %}</a></li>
                                             <li role="separator" class="divider"></li>
-                                            <li><a href="{{ url('alex_static_pages_medida')}}">Programación a medida</a></li>
+                                            <li><a href="{{ url('alex_static_pages_medida')}}">{% trans from "trans"%}Programación a medida{% endtrans %}</a></li>
                                             <li role="separator" class="divider"></li>
-                                            <li><a href="{{ url('alex_static_pages_integration')}}">Integración de sistemas</a></li>
+                                            <li><a href="{{ url('alex_static_pages_integration')}}">{% trans from "trans"%}Integración de sistemas{% endtrans %}</a></li>
                                         </ul>
                                     </li>
-                                    <li id="buttonquien"><a  href="{{ url('alex_static_pages_contact')}}">Sobre nosotros</a></li>
-                                    <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">Contacta</a></li>
+                                    <li id="buttonquien"><a  href="{{ url('alex_static_pages_contact')}}">{% trans from "trans"%}Sobre nosotros{% endtrans %}</a></li>
+                                    <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">{% trans from "trans"%}Contacta{% endtrans %}</a></li>
                                 </ul>
 
                                 {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
@@ -131,7 +131,7 @@
                                             </a>
                                         </div>
                                         <div class="media-body">
-                                            <h4 class="media-heading">Dirección</h4>
+                                            <h4 class="media-heading">{% trans from "trans"%}Dirección{% endtrans %}</h4>
                                             <p>Calle Feliu i Codina,3</p>
                                             <p>Cornella de Llobregat</p>
                                             <p>Barcelona, 08940</p>
@@ -146,7 +146,7 @@
                                             </a>
                                         </div>
                                         <div class="media-body">
-                                            <h4 class="media-heading">Correo</h4>
+                                            <h4 class="media-heading">{% trans from "trans"%}Correo electrónico{% endtrans %}</h4>
                                             <p>alexandre.ortigosa@gmail.com</p>
                                         </div>
                                     </div>
@@ -157,7 +157,7 @@
                                             </a>
                                         </div>
                                         <div class="media-body">
-                                            <h4 class="media-heading">Teléfono</h4>
+                                            <h4 class="media-heading">{% trans from "trans"%}Teléfono{% endtrans %}</h4>
                                             <p>+34 638 41 99 29</p>
                                         </div>
                                     </div>

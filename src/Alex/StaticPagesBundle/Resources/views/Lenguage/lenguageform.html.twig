@@ -3,10 +3,10 @@
         <a id="languageButton" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="flagSelected" class="flag-icon flag-icon-gb flag-icon-squared"></span> <span class="caret"></span></a>
         <ul class="dropdown-menu">
             <li role="presentation">
-                <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">Ingles<span class="flag-icon flag-icon-gb flag-icon-squared"></span></a>
+                <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">{% trans from "trans"%}Ingles{% endtrans %}<span class="flag-icon flag-icon-gb flag-icon-squared"></span></a>
             </li>
             <li role="presentation">
-                <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'})) }}">Español<span class="flag-icon flag-icon-es flag-icon-squared"></span></a>
+                <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'})) }}">{% trans from "trans"%}Español{% endtrans %}<span class="flag-icon flag-icon-es flag-icon-squared"></span></a>
             </li>
         </ul>
     </li>
