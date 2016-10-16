@@ -1,6 +1,14 @@
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: alex_static_pages_homepage
+        permanent: true
 alex_static_pages:
     resource: "@AlexStaticPagesBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /{_locale}
+    requirements:
+      _locale: en|es
 
 app:
     resource: "@AppBundle/Controller/"

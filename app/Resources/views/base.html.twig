@@ -221,6 +221,7 @@
        {% endblock %}
         <script>
             $(document).ready(function(){
+                setLenguage();
                 {% block jsready %}
 
                 {% endblock %}
@@ -229,6 +230,14 @@
             function selectedMenuSer(id) {
                 $("#"+id).addClass("active");
                 $("#"+id+" a").append("<span class='sr-only'>(current)</span>");
+            }
+            function setLenguage() {
+                var locale = "{{ app.request.get('_locale') }}";
+                if(locale=="en"){
+                    locale="gb";
+                }
+                $("#flagSelected").removeClass();
+                $("#flagSelected").addClass("flag-icon").addClass("flag-icon-"+locale).addClass("flag-icon-squared");
             }
         </script>
 

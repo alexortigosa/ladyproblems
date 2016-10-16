@@ -21,24 +21,24 @@ class LenguageController extends Controller
 
     public function englishAction(Request $request)
     {
-        $this->get('session')->setLocale('en_US');
+        $request->getSession()->set('_locale','en');
         return $this->redirect($request->headers->get('referer'));
     }
     public function spanishAction(Request $request)
     {
-        $this->get('session')->setLocale('es_ES');
+        $request->getSession()->set('_locale','es');
         return $this->redirect($request->headers->get('referer'));
     }
 
     public function chineseAction(Request $request)
     {
-        $this->get('session')->setLocale('zh_CN');
+        $request->getSession()->set('_locale','zh');
         return $this->redirect($request->headers->get('referer'));
     }
 
     public function frenchAction(Request $request)
     {
-        $this->get('session')->setLocale('fr_FR');
+        $request->getSession()->set('_locale','fr');
         return $this->redirect($request->headers->get('referer'));
     }
 
