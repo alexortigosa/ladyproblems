@@ -25,3 +25,15 @@ alex_static_pages_contact_succes:
 alex_static_pages_contact_fail:
     path:     /contacto/fail
     defaults: { _controller: AlexStaticPagesBundle:Default:formfailed }
+alex_static_pages_lang_switch:
+    path:     /switch
+    defaults: { _controller: AlexStaticPagesBundle:Lenguage:switch }
+alex_static_pages_lang_eng:
+    path:     /english
+    defaults: { _controller: AlexStaticPagesBundle:Lenguage:english }
+alex_static_pages_lang_cat:
+    path:     /catala
+    defaults: { _controller: AlexStaticPagesBundle:Lenguage:spanish }
+alex_static_pages_lang_es:
+    path:     /espanol
+    defaults: { _controller: AlexStaticPagesBundle:Lenguage:spanish }

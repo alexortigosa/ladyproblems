@@ -74,6 +74,7 @@
                                     <li id="buttonquien"><a  href="{{ url('alex_static_pages_contact')}}">Sobre nosotros</a></li>
                                     <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">Contacta</a></li>
                                 </ul>
+
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
                     </nav>
@@ -81,10 +82,13 @@
 
                 <div id="headerbottom" class="row">
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                        {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
                         <!--<ol class="breadcrumb">
+                        {% if breadcrumbs is defined %}
                             {% for breadcrumb in breadcrumbs %}
                                 <li><a href="{% if breadcrumb[1] != "#" %}{{ url(breadcrumb[1]) }}{% else %}#{% endif %}"></a>{{ breadcrumb[0] }}</li>
                             {% endfor %}
+                         {% endif %}
                         </ol>
                         -->
                     </div>
