@@ -1,11 +1,13 @@
-<ul id="languageSelector" class="nav">
-    <li>
-        <a href="{{ path('alex_static_pages_lang_eng') }}"><span class="flag-icon flag-icon-en flag-icon-squared"></span></a>
-    </li>
-    <li>
-        <a href="{{ path('alex_static_pages_lang_es') }}"><span class="flag-icon flag-icon-es flag-icon-squared"></span></a>
-    </li>
-    <li>
-        <a href="{{ path('alex_static_pages_lang_cat') }}"><span class="flag-icon flag-icon-gr flag-icon-squared"></span></a>
+<ul class="nav navbar-nav">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-gb flag-icon-squared"></span> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li role="presentation" class="active">
+                <a href="{{ path('alex_static_pages_lang_eng') }}">Ingles<span class="flag-icon flag-icon-gb flag-icon-squared"></span></a>
+            </li>
+            <li role="presentation">
+                <a href="{{ path('alex_static_pages_lang_es') }}">Español<span class="flag-icon flag-icon-es flag-icon-squared"></span></a>
+            </li>
+        </ul>
     </li>
 </ul>

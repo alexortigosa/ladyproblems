@@ -9,7 +9,7 @@
        {% block customcss %}
            <link href="https://fonts.googleapis.com/css?family=Oranienbaum" rel="stylesheet">
            <link rel="stylesheet" href="{{ asset('assets/normalize.css') }}"/>
-
+           <link rel="stylesheet" href="{{ asset('assets/vendor/flag-icon-css/css/flag-icon.min.css') }}"/>
            <link rel="stylesheet" href="{{ asset('assets/boots/css/bootstrap.css') }}"/>
            <link rel="stylesheet" href="{{ asset('assets/boots/css/bootstrap-theme.css') }}"/>
            <link rel="stylesheet" href="{{ asset('assets/global.css') }}"/>
@@ -75,6 +75,8 @@
                                     <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">Contacta</a></li>
                                 </ul>
 
+                                {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
+
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
                     </nav>
@@ -82,7 +84,6 @@
 
                 <div id="headerbottom" class="row">
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                        {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
                         <!--<ol class="breadcrumb">
                         {% if breadcrumbs is defined %}
                             {% for breadcrumb in breadcrumbs %}
