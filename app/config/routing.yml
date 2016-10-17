@@ -1,6 +1,3 @@
-alex_custom_user:
-    resource: "@AlexCustomUserBundle/Resources/config/routing.yml"
-    prefix:   /
 
 root:
     path: /
