@@ -35,6 +35,9 @@
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
+                                {% include ':User:login.html.twig' %}
+
                                 <ul class="nav navbar-nav navbar-right">
                                     <li id="buttonhome" ><a href="{{ url('alex_static_pages_homepage')}}">{% trans from "trans"%}Inicio{% endtrans %}</a></li>
                                     <li id="buttonservice" class="dropdown">
@@ -50,9 +53,6 @@
                                     <li id="buttonquien"><a  href="{{ url('alex_static_pages_contact')}}">{% trans from "trans"%}Sobre nosotros{% endtrans %}</a></li>
                                     <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">{% trans from "trans"%}Contacta{% endtrans %}</a></li>
                                 </ul>
-
-                                {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
-
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
                     </nav>

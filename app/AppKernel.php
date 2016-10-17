@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Alex\StaticPagesBundle\AlexStaticPagesBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new \FOS\UserBundle\FOSUserBundle(),
+            new Alex\CustomUserBundle\AlexCustomUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

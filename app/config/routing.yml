@@ -1,3 +1,7 @@
+alex_custom_user:
+    resource: "@AlexCustomUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 root:
     path: /
     defaults:
@@ -9,6 +13,8 @@ alex_static_pages:
     prefix:   /{_locale}
     requirements:
       _locale: en|es
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 app:
     resource: "@AppBundle/Controller/"
