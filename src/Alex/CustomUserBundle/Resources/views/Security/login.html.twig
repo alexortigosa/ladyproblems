@@ -1,0 +1,31 @@
+
+{% extends "::base.html.twig" %}
+{% block customcss %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/login/login.css') }}"/>
+{% endblock %}
+
+{% block contenido %}
+    <div id="customLogin" class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    {% trans from "trans"%}Entrar{% endtrans %}
+                </div>
+                <div class="panel-body">
+                    {{ include('FOSUserBundle:Security:login_content.html.twig') }}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    {% trans from "trans"%}Registrarse{% endtrans %}
+                </div>
+                <div class="panel-body">
+                    <a href="{{ path('fos_user_registration_register')}}" class="btn btn-primary btn-block">{% trans from "trans" %}Registrate{% endtrans %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
