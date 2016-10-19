@@ -1,0 +1,14 @@
+services:
+  alex.customuser.services.logout_handler:
+    class:  Alex\CustomUserBundle\Services\Auth\Handler\LogoutSuccessHandler
+    arguments:  ['service_container', 'router']
+    tags:
+      - {name: 'monolog.logger', chanel: 'security'}
+#    alex.customuser.example:
+#        class:     Alex\CustomUserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+#        calls:
+#            - [setService, ["@service_id"]]
+#        tags:
+#            - { name: twig.extension }
+#            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
