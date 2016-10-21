@@ -30,14 +30,13 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#"><img src="{{ asset('assets/img/header/aolog.png') }}" class="img-responsive" alt="Responsive image"/></a>
+                                <a class="navbar-brand" href="#"><img src="{{ asset('assets/img/header/aolognew.png') }}" class="img-responsive" alt="Responsive image"/></a>
                             </div>
 
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
                                 {% include '@AlexCustomUser/Custom/loginheader.html.twig' %}
-
                                 <ul class="nav navbar-nav navbar-right">
                                     <li id="buttonhome" ><a href="{{ url('alex_static_pages_homepage')}}">{% trans from "trans"%}Inicio{% endtrans %}</a></li>
                                     <li id="buttonservice" class="dropdown">
@@ -88,98 +87,64 @@
                 </div>
             </div>
             <div id="footer" class="row container-fluid">
-                <div id="foot_col_left" class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 embed-responsive embed-responsive-16by9">
-                            <iframe id="mapsiframe" class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.4475622407467!2d2.072895415382243!3d41.36435990538533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49967b8061e63%3A0x45d47aaabacd85ac!2sCarrer+de+Josep+Feliu+i+Codina%2C+3%2C+08940+Cornell%C3%A0+de+Llobregat%2C+Barcelona!5e0!3m2!1ses!2ses!4v1473678536983" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div>
+                <div id="foot_col_1" class="col-lg-3 col-md-3 col-xs-12 col-sm-12 ">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-success">Cras justo odio</button>
+                        <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+                        <button type="button" class="list-group-item">Morbi leo risus</button>
+                        <button type="button" class="list-group-item">Porta ac consectetur ac</button>
+                        <button type="button" class="list-group-item">Vestibulum at eros</button>
                     </div>
+                    <img src="{{ asset('assets/img/header/aolognew.png') }}" class="img-responsive vertical-align" alt="Responsive image"/>
                 </div>
-                <div id="foot_col_right" class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#">
-                                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">{% trans from "trans"%}Dirección{% endtrans %}</h4>
-                                            <p>Calle Feliu i Codina,3</p>
-                                            <p>Cornella de Llobregat</p>
-                                            <p>Barcelona, 08940</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#">
-                                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">{% trans from "trans"%}Correo electrónico{% endtrans %}</h4>
-                                            <p>alexandre.ortigosa@gmail.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#">
-                                                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">{% trans from "trans"%}Teléfono{% endtrans %}</h4>
-                                            <p>+34 638 41 99 29</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div id="foot_col_2" class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
+                </div>
+                <div id="foot_col_3" class="col-lg-3 col-md-3 col-xs-12 col-sm-12"></div>
+                <div id="foot_col_4" class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 embed-responsive embed-responsive-4by3">
+                        <iframe id="mapsiframe" class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.4475622407467!2d2.072895415382243!3d41.36435990538533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49967b8061e63%3A0x45d47aaabacd85ac!2sCarrer+de+Josep+Feliu+i+Codina%2C+3%2C+08940+Cornell%C3%A0+de+Llobregat%2C+Barcelona!5e0!3m2!1ses!2ses!4v1473678536983" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#">
-                                                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Dirección</h4>
-                                            <p>Calle Feliu i Codina,3</p>
-                                            <p>Cornella de Llobregat</p>
-                                            <p>Barcelona, 08940</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#">
-                                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Correo</h4>
-                                            <p>alexandre.ortigosa@gmail.com</p>
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 dirclass">
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">{% trans from "trans"%}Dirección{% endtrans %}</h4>
+                                                <p>Calle Feliu i Codina,3</p>
+                                                <p>Cornella de Llobregat</p>
+                                                <p>Barcelona, 08940</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <a href="#">
-                                                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                                            </a>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">{% trans from "trans"%}Correo electrónico{% endtrans %}</h4>
+                                                <p>alexandre.ortigosa@gmail.com</p>
+                                            </div>
                                         </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Teléfono</h4>
-                                            <p>+34 638 41 99 29</p>
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="#">
+                                                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">{% trans from "trans"%}Teléfono{% endtrans %}</h4>
+                                                <p>+34 638 41 99 29</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -73,12 +73,25 @@ body{
 	padding-bottom: 1%;
 	color: white;
 }
-#foot_col_right .panel{
+#foot_col_4 .panel{
+	/*
 	background: inherit !important;
+	*/
+	color: black;
+}
+.dirclass{
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 1%;
 }
 
 /*
 
 */
 .flag-icon{
+}
+
+.vertical-align {
+	display: flex;
+	align-items: center;
 }
