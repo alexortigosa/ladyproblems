@@ -3,19 +3,16 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
        <title>{% block title %}Alex Ortigosa Web{% endblock %}</title>
-
-
-
        {% block customcss %}
            <link href="https://fonts.googleapis.com/css?family=Oranienbaum" rel="stylesheet">
            <link rel="stylesheet" href="{{ asset('assets/normalize.css') }}"/>
            <link rel="stylesheet" href="{{ asset('assets/vendor/flag-icon-css/css/flag-icon.min.css') }}"/>
            <link rel="stylesheet" href="{{ asset('assets/boots/css/bootstrap.css') }}"/>
            <link rel="stylesheet" href="{{ asset('assets/boots/css/bootstrap-theme.css') }}"/>
+           <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/socialicious.css') }}" media="screen" />
            <link rel="stylesheet" href="{{ asset('assets/global.css') }}"/>
        {% endblock %}
     </head>
-            
     <body>
         <div id="page" class="container-fluid">
             <div id="header" class="row container-fluid">
@@ -32,7 +29,6 @@
                                 </button>
                                 <a class="navbar-brand" href="#"><img src="{{ asset('assets/img/header/aolognew.png') }}" class="img-responsive" alt="Responsive image"/></a>
                             </div>
-
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
@@ -98,12 +94,26 @@
                     <img src="{{ asset('assets/img/header/aolognew.png') }}" class="img-responsive vertical-align" alt="Responsive image"/>
                 </div>
                 <div id="foot_col_2" class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
-                </div>
-                <div id="foot_col_3" class="col-lg-3 col-md-3 col-xs-12 col-sm-12"></div>
-                <div id="foot_col_4" class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 embed-responsive embed-responsive-4by3">
-                        <iframe id="mapsiframe" class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.4475622407467!2d2.072895415382243!3d41.36435990538533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49967b8061e63%3A0x45d47aaabacd85ac!2sCarrer+de+Josep+Feliu+i+Codina%2C+3%2C+08940+Cornell%C3%A0+de+Llobregat%2C+Barcelona!5e0!3m2!1ses!2ses!4v1473678536983" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item"><i class="icon-2x icon-facebook"></i><p>Facebook</p></button>
+                                <button type="button" class="list-group-item"><i class="icon-2x icon-github"></i><p>GitHub</p></button>
+                                <button type="button" class="list-group-item"><i class="icon-2x icon-googleplus"></i><p>Google Plus</p></button>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item"><i class="icon-2x icon-linkedin"></i><p>Linkedin</p></button>
+                                <button type="button" class="list-group-item"><i class="icon-2x icon-twitter"></i><p>Twitter</p></button>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div id="foot_col_3" class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                    <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 embed-responsive embed-responsive-4by3">
+                        <iframe id="mapsiframe" class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.4475622407467!2d2.072895415382243!3d41.36435990538533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49967b8061e63%3A0x45d47aaabacd85ac!2sCarrer+de+Josep+Feliu+i+Codina%2C+3%2C+08940+Cornell%C3%A0+de+Llobregat%2C+Barcelona!5e0!3m2!1ses!2ses!4v1473678536983" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>-->
                     <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 dirclass">
                         <div class="panel panel-primary">
                             <div class="panel-body">
@@ -151,6 +161,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p class="text-center">Copyright by Alexandre Ortigosa Barragan<span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span></p>
                 </div>
             </div>
         </div>

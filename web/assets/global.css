@@ -73,7 +73,15 @@ body{
 	padding-bottom: 1%;
 	color: white;
 }
-#foot_col_4 .panel{
+#footer .list-group{
+	background: inherit !important;
+	border: none;
+}
+#footer .list-group .list-group-item{
+	background: inherit !important;
+	border: none;
+}
+#foot_col_3 .panel{
 	/*
 	background: inherit !important;
 	*/
