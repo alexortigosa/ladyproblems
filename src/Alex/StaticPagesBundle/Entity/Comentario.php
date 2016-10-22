@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\CustomUserBundle\Entity;
+namespace Alex\StaticPagesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Comentario
  *
  * @ORM\Table(name="comentario")
- * @ORM\Entity(repositoryClass="Alex\CustomUserBundle\Repository\ComentarioRepository")
+ * @ORM\Entity(repositoryClass="Alex\StaticPagesBundle\Repository\ComentarioRepository")
  */
 class Comentario
 {
@@ -31,9 +31,9 @@ class Comentario
     /**
      * @var string
      *
-     * @ORM\Column(name="artefacto", type="string", length=255)
+     * @ORM\Column(name="proyecto", type="string", length=255)
      */
-    private $artefacto;
+    private $proyecto;
 
 
     /**
@@ -71,27 +71,27 @@ class Comentario
     }
 
     /**
-     * Set artefacto
+     * Set proyecto
      *
-     * @param string $artefacto
+     * @param string $proyecto
      *
      * @return Comentario
      */
-    public function setArtefacto($artefacto)
+    public function setProyecto($proyecto)
     {
-        $this->artefacto = $artefacto;
+        $this->proyecto = $proyecto;
 
         return $this;
     }
 
     /**
-     * Get artefacto
+     * Get proyecto
      *
      * @return string
      */
-    public function getArtefacto()
+    public function getProyecto()
     {
-        return $this->artefacto;
+        return $this->proyecto;
     }
 }
 

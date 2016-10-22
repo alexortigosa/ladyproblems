@@ -1,6 +1,6 @@
 <?php
 
-namespace Alex\CustomUserBundle\Repository;
+namespace Alex\StaticPagesBundle\Repository;
 
 /**
  * ArtefactoRepository
