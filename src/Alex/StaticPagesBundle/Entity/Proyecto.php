@@ -3,6 +3,7 @@
 namespace Alex\StaticPagesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Alex\StaticPagesBundle\Entity\User;
 
 /**
  * Proyecto
@@ -57,11 +58,12 @@ class Proyecto
     private $prevision;
 
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="prevision", type="date", nullable=true)
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
      */
-    private $prevision;
+    private $usuario;
+
+
 
     /**
      * Get id
@@ -191,6 +193,22 @@ class Proyecto
     public function getPrevision()
     {
         return $this->prevision;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * @param mixed $usuario
+     */
+    public function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
     }
 }
 
