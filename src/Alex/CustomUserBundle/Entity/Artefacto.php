@@ -28,12 +28,13 @@ class Artefacto
      */
     private $prevision;
 
+
     /**
-     * @var \DateTime
+     * @var float
      *
-     * @ORM\Column(name="fechaentrega", type="datetime", nullable=true)
+     * @ORM\Column(name="precioHora", type="float")
      */
-    private $fechaentrega;
+    private $precioHora;
 
     /**
      * @var string
@@ -41,6 +42,8 @@ class Artefacto
      * @ORM\Column(name="empleado", type="string", length=255, nullable=true)
      */
     private $empleado;
+
+
 
 
     /**
@@ -77,29 +80,7 @@ class Artefacto
         return $this->prevision;
     }
 
-    /**
-     * Set fechaentrega
-     *
-     * @param \DateTime $fechaentrega
-     *
-     * @return Artefacto
-     */
-    public function setFechaentrega($fechaentrega)
-    {
-        $this->fechaentrega = $fechaentrega;
 
-        return $this;
-    }
-
-    /**
-     * Get fechaentrega
-     *
-     * @return \DateTime
-     */
-    public function getFechaentrega()
-    {
-        return $this->fechaentrega;
-    }
 
     /**
      * Set empleado
@@ -123,6 +104,29 @@ class Artefacto
     public function getEmpleado()
     {
         return $this->empleado;
+    }
+    /**
+     * Set precioHora
+     *
+     * @param float $precioHora
+     *
+     * @return Projecto
+     */
+    public function setPrecioHora($precioHora)
+    {
+        $this->precioHora = $precioHora;
+
+        return $this;
+    }
+
+    /**
+     * Get precioHora
+     *
+     * @return float
+     */
+    public function getPrecioHora()
+    {
+        return $this->precioHora;
     }
 }
 

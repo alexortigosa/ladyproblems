@@ -36,11 +36,13 @@ class Projecto
     private $precioTotal;
 
     /**
-     * @var float
+     * @var \DateTime
      *
-     * @ORM\Column(name="precioHora", type="float")
+     * @ORM\Column(name="fechaentrega", type="datetime", nullable=true)
      */
-    private $precioHora;
+    private $fechaentrega;
+
+
 
 
     /**
@@ -102,27 +104,28 @@ class Projecto
     }
 
     /**
-     * Set precioHora
+     * Set fechaentrega
      *
-     * @param float $precioHora
+     * @param \DateTime $fechaentrega
      *
-     * @return Projecto
+     * @return Artefacto
      */
-    public function setPrecioHora($precioHora)
+    public function setFechaentrega($fechaentrega)
     {
-        $this->precioHora = $precioHora;
+        $this->fechaentrega = $fechaentrega;
 
         return $this;
     }
 
     /**
-     * Get precioHora
+     * Get fechaentrega
      *
-     * @return float
+     * @return \DateTime
      */
-    public function getPrecioHora()
+    public function getFechaentrega()
     {
-        return $this->precioHora;
+        return $this->fechaentrega;
     }
+
 }
 
