@@ -42,10 +42,10 @@
                                             <li role="separator" class="divider"></li>
                                             <li><a href="{{ url('alex_static_pages_medida')}}">{% trans from "trans"%}Programación a medida{% endtrans %}</a></li>
                                             <li role="separator" class="divider"></li>
-                                            <li><a href="{{ url('alex_static_pages_integration')}}">{% trans from "trans"%}Integración de sistemas{% endtrans %}</a></li>
+                                            <!--<li><a href="{{ url('alex_static_pages_integration')}}">{% trans from "trans"%}Integración de sistemas{% endtrans %}</a></li>-->
                                         </ul>
                                     </li>
-                                    <li id="buttonquien"><a  href="{{ url('alex_static_pages_contact')}}">{% trans from "trans"%}Sobre nosotros{% endtrans %}</a></li>
+                                    <li id="buttonquien"><a  href="{{ url('alex_static_pages_about')}}">{% trans from "trans"%}Sobre nosotros{% endtrans %}</a></li>
                                     <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">{% trans from "trans"%}Contacta{% endtrans %}</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
@@ -85,13 +85,10 @@
             <div id="footer" class="row container-fluid">
                 <div id="foot_col_1" class="col-lg-3 col-md-3 col-xs-12 col-sm-12 ">
                     <div class="list-group">
-                        <a href="#" class="list-group-item">Inicio</a>
+                        <a href="{{ url('alex_static_pages_homepage')}}"  class="list-group-item">Inicio</a>
                         <a href="#" class="list-group-item">Mapa Web</a>
-                        <a href="#" class="list-group-item">Misión y visión</a>
-                        <a href="#" class="list-group-item">Terminos de uso</a>
-                        <a href="#" class="list-group-item">Técnologías usadas</a>
-                        <a href="#" class="list-group-item">Técnologías usadas</a>
-                        <a href="#" class="list-group-item">Técnologías usadas</a>
+                        <a href="{{ url('alex_static_pages_about')}}" class="list-group-item">Misión y visión</a>
+                        <!--<a href="#" class="list-group-item">Terminos de uso</a>-->
                     </div>
 
                 </div>
@@ -99,16 +96,15 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div class="list-group">
-                                <button type="button" class="list-group-item"><i class="icon-2x icon-facebook"></i><p>Facebook</p></button>
-                                <button type="button" class="list-group-item"><i class="icon-2x icon-github"></i><p>GitHub</p></button>
-                                <button type="button" class="list-group-item"><i class="icon-2x icon-googleplus"></i><p>Google Plus</p></button>
+                                <a href="https://www.facebook.com/aotechbcn"> <button type="button" class="list-group-item"><i class="icon-2x icon-facebook"></i><p>Facebook</p></button></a>
+                                <a href="https://github.com/alexortigosa"> <button type="button" class="list-group-item"><i class="icon-2x icon-github"></i><p>GitHub</p></button></a>
+                                <a href="https://plus.google.com/u/0/b/104219457877063308351/104219457877063308351/about"><button type="button" class="list-group-item"><i class="icon-2x icon-googleplus"></i><p>Google Plus</p></button></a>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div class="list-group">
-                                <button type="button" class="list-group-item"><i class="icon-2x icon-linkedin"></i><p>Linkedin</p></button>
-                                <button type="button" class="list-group-item"><i class="icon-2x icon-twitter"></i><p>Twitter</p></button>
-                                <button type="button" class="list-group-item"><i class="icon-2x icon-twitter"></i><p>Twitter</p></button>
+                                <a href="https://es.linkedin.com/in/alexandre-ortigosa-barragan-689a9243"> <button type="button" class="list-group-item"><i class="icon-2x icon-linkedin"></i><p>Linkedin</p></button></a>
+                                <a href="https://twitter.com/aotechbcn"> <button type="button" class="list-group-item"><i class="icon-2x icon-twitter"></i><p>Twitter</p></button></a>
                             </div>
                         </div>
                     </div>

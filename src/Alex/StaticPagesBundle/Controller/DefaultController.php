@@ -17,6 +17,7 @@ class DefaultController extends Controller
 			'medida' => array('A medida',"alex_static_pages_medida"),
 			),
 		"contacto" => array("Contacto","alex_static_pages_contact"),
+        "contacto" => array("sobrenosotros","alex_static_pages_about"),
 		);
 
     public function indexAction(Request $request)
@@ -43,6 +44,11 @@ class DefaultController extends Controller
     {
         return $this->render('AlexStaticPagesBundle:Home:layout.html.twig',
             array("breadcrumbs" => $this->getBreadCrumb("integration")));
+    }
+    public function sobreAction()
+    {
+        return $this->render('AlexStaticPagesBundle:Servicios:sobrenosotros.html.twig',
+            array("breadcrumbs" => $this->getBreadCrumb("sobrenosotros")));
     }
     public function contactAction(Request $request)
     {
