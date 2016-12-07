@@ -19,6 +19,9 @@ alex_static_pages_contact:
 alex_static_pages_about:
     path:     /sobrenosotros
     defaults: { _controller: AlexStaticPagesBundle:Default:sobre }
+alex_static_pages_map:
+    path:     /map
+    defaults: { _controller: AlexStaticPagesBundle:Default:map }
 alex_static_pages_contact_post:
     path:     /contacto/post
     defaults: { _controller: AlexStaticPagesBundle:Default:contactpost }

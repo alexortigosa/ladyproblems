@@ -45,6 +45,11 @@ class DefaultController extends Controller
         return $this->render('AlexStaticPagesBundle:Home:layout.html.twig',
             array("breadcrumbs" => $this->getBreadCrumb("integration")));
     }
+    public function mapAction()
+    {
+        return $this->render('AlexStaticPagesBundle:Default:map.html.twig',
+            array("breadcrumbs" => $this->getBreadCrumb("integration")));
+    }
     public function sobreAction()
     {
         return $this->render('AlexStaticPagesBundle:Servicios:sobrenosotros.html.twig',
