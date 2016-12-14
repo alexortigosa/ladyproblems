@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return $this->render('AlexCustomUserBundle:Default:index.html.twig');
     }
+
+
+
+
 }

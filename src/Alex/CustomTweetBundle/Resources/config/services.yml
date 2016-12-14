@@ -1,0 +1,8 @@
+services:
+#    alex_custom_tweet.example:
+#        class: Alex\CustomTweetBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    alex_custom.twitter:
+        class: Alex\CustomTweetBundle\Twiteer\CustomTweeter
+        arguments: [ '%endroid.twitter.consumer_key%', '%endroid.twitter.consumer_secret%', '%endroid.twitter.access_token%', '%endroid.twitter.access_token_secret%', '%endroid.twitter.api_url%', '%endroid.twitter.proxy%', '%endroid.twitter.timeout%' ]
+

@@ -6,6 +6,17 @@
             </a>
         </li>
         <li>
+            <a href="{{ path('alex_static_pages_qr') }}">
+                {% trans from "trans" %}MyQR{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('alex_static_pages_tweet_list') }}">
+                {% trans from "trans" %}tweets{% endtrans %}
+            </a>
+        </li>
+
+        <li>
 
             <a href="{{ path('fos_user_security_logout') }}">
                 {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}

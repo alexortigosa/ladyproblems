@@ -43,3 +43,10 @@ alex_static_pages_lang_cat:
 alex_static_pages_lang_es:
     path:     /espanol
     defaults: { _controller: AlexStaticPagesBundle:Lenguage:spanish }
+alex_static_pages_qr:
+    path:     /qr
+    defaults: { _controller: AlexStaticPagesBundle:Default:qr }
+alex_static_pages_tweet_list:
+    path:     /tweetlist
+    defaults: { _controller: AlexStaticPagesBundle:Default:twitts }
+

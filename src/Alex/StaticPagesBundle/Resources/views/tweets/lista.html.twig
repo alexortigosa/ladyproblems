@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block title %} Alex Ortigosa Web - Sistemas E-commerce {% endblock %}
+{% block customcss %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/ecom.css') }}"/>
+{% endblock %}
+{% block contenido %}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            {% if twets is defined %}
+                {{ dump(twets) }}
+            {% endif %}
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block customjs %}
+    {{ parent() }}
+    <script>
+        function goToGraph(){
+            $('#myTabs li:eq(1) a').tab('show');
+        }
+        function euqalHeightintabs(){
+            var maxHeight=0;
+            $("#myTabs .tab-pane").each(function () {
+                var tabHeight=$(this).height();
+                if(tabHeight>maxHeight)
+                    maxHeight=tabHeight;
+            });
+            $("#myTabs .tab-pane").each(function () {
+                $(this).height(maxHeight);
+            });
+
+        }
+    </script>
+{% endblock %}
+{% block jsready %}
+    euqalHeightintabs();
+    selectedMenuSer("buttonservice");
+{% endblock %}

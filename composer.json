@@ -31,7 +31,9 @@
         "symfony/assetic-bundle": "^2.8",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "sonata-project/admin-bundle": "^3.9",
-        "sonata-project/doctrine-orm-admin-bundle": "^3.1"
+        "sonata-project/doctrine-orm-admin-bundle": "^3.1",
+        "endroid/qrcode-bundle": "^2.0",
+        "endroid/twitter-bundle": "^1.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

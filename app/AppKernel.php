@@ -27,6 +27,9 @@ class AppKernel extends Kernel
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             //Fin sonata admin bundlepw
+            new Endroid\Bundle\QrCodeBundle\EndroidQrCodeBundle(),
+            new Endroid\Bundle\TwitterBundle\EndroidTwitterBundle(),
+            new Alex\CustomTweetBundle\AlexCustomTweetBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

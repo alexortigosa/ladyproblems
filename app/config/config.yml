@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@AlexCustomTweetBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -86,6 +87,20 @@ sonata_block:
         sonata.admin.block.admin_list:
             contexts: [admin]
         # ...
+endroid_qr_code:
+    size: 100
+    padding: 10
+    extension: gif
+    error_correction_level: high
+    foreground_color: { r: 0, g: 0, b: 0, a: 0 }
+    background_color: { r: 255, g: 255, b: 255, a: 0 }
+    label: "My label"
+    label_font_size: 16
+endroid_twitter:
+    consumer_key: "geeNFYNFWCNgNWozRFq9C7Od3"
+    consumer_secret: "LKHEyUF1yFRHOQ8H6LfQ2syrwEYj3xRZGFKSqm5qQMCrYsrlum"
+    access_token: "794499881410953217-lUgFFXD5GmDunyzqXiBq6rIIPELUsEX"
+    access_token_secret: "e7Q5qZaT6DwsvJnSoL34T318OsjMNv3qL94psVcScDDp3"
 
 
 

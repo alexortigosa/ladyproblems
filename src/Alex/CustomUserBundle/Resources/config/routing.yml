@@ -1,1 +1,3 @@
-
+prueba_path:
+  path: /aver
+  defaults: {_controller: AlexCustomUserBundle:Default:index}

@@ -6,6 +6,7 @@ use Alex\StaticPagesBundle\Entity\Contact;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Alex\StaticPagesBundle\Form\ContactType;
+use Alex\StaticPagesBundle\Utils\Utils;
 
 class DefaultController extends Controller
 {
@@ -19,6 +20,8 @@ class DefaultController extends Controller
 		"contacto" => array("Contacto","alex_static_pages_contact"),
         "contacto" => array("sobrenosotros","alex_static_pages_about"),
 		);
+
+
 
     public function indexAction(Request $request)
     {
@@ -121,6 +124,34 @@ class DefaultController extends Controller
     }
     public function formfailedAction(){
         return $this->render('AlexStaticPagesBundle:contacto:failedform.html.twig',array("breadcrumbs" => $this->getBreadCrumb("contacto")));
+    }
+
+    public function pruebaultimaAction(){
+        return $this->render('AlexStaticPagesBundle:contacto:failedform.html.twig',array("breadcrumbs" => $this->getBreadCrumb("contacto")));
+    }
+
+    public function qrAction()
+    {
+        return $this->render('AlexStaticPagesBundle:User:myqr.html.twig',
+            array("breadcrumbs" => "asd"));
+
+    }
+
+    public function twittsAction(){
+        $twitter = $this->get('alex_custom.twitter');
+
+        // Retrieve the user's timeline
+        $tweets = $twitter->getTimeline(array(
+            'count' => 5
+        ));
+
+        // Or retrieve the timeline using the generic query method
+        $response = $twitter->query('statuses/mentions_timeline', 'GET', 'json');
+        $tweets = json_decode($response->getContent());
+        return $this->render('AlexStaticPagesBundle:tweets:lista.html.twig',
+            array("breadcrumbs" => "asd",
+                "twets" => Utils::getMentionsUsers($tweets)));
+
     }
 
     private function getBreadCrumb($key){
