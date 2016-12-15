@@ -4,6 +4,18 @@ services:
         arguments: ['%kernel.default_locale%']
         tags:
             - { name: kernel.event_subscriber }
+    app.sorteo:
+      class:  Alex\StaticPagesBundle\Admin\SorteoAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, label: Sorteo }
+      arguments: [null, Alex\StaticPagesBundle\Entity\Sorteo, null]
+
+    app.consumicion:
+          class:  Alex\StaticPagesBundle\Admin\ConsumicionAdmin
+          tags:
+            - { name: sonata.admin, manager_type: orm, label: Consumición }
+          arguments: [null, Alex\StaticPagesBundle\Entity\Consumicion, null]
+
 
 
 

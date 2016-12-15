@@ -9,6 +9,11 @@ root:
         _controller: FrameworkBundle:Redirect:redirect
         route: alex_static_pages_homepage
         permanent: true
+_sonata_admin:
+  resource: .
+  type: sonata_admin
+  prefix: /admin
+
 alex_static_pages:
     resource: "@AlexStaticPagesBundle/Resources/config/routing.yml"
     prefix:   /{_locale}

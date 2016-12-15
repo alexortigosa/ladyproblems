@@ -16,7 +16,6 @@ class Utils
         foreach ($twits as $t){
             array_push($res,$t->user->screen_name);
         }
-
         return $res;
     }
 }

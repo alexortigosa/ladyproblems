@@ -1,0 +1,67 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: alexandreortigosa
+ * Date: 15/12/2016
+ * Time: 14:41
+ */
+
+namespace Alex\StaticPagesBundle\Admin;
+
+
+use Alex\StaticPagesBundle\Entity\Sorteo;
+use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Show\ShowMapper;
+use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Datagrid\ListMapper;
+use Sonata\AdminBundle\Datagrid\DatagridMapper;
+
+class SorteoAdmin extends Admin
+{
+    // Fields to be shown on create/edit forms
+    protected function configureFormFields(FormMapper $formMapper)
+    {
+        $formMapper
+            ->add('fechaInicio', 'date', array(
+                'label' => 'Fecha inicio'
+            ))
+            ->add('fechaFin', 'date', array(
+                'label' => 'Fecha Fin'
+            ))
+
+            // if no type is specified, SonataAdminBundle tries to guess it
+            //->add('body')
+
+            // ...
+        ;
+    }
+
+    // Fields to be shown on filter forms
+    protected function configureDatagridFilters(DatagridMapper $datagridMapper)
+    {
+        $datagridMapper
+            ->add('fechaInicio')
+            ->add('fechaFin')
+        ;
+    }
+
+    // Fields to be shown on lists
+    protected function configureListFields(ListMapper $listMapper)
+    {
+        $listMapper
+            ->addIdentifier('id')
+            ->add('fechaInicio')
+            ->add('fechaFin')
+        ;
+    }
+
+    // Fields to be shown on show action
+    protected function configureShowFields(ShowMapper $showMapper)
+    {
+        $showMapper
+            ->add('id')
+            ->add('fechaInicio')
+            ->add('FechaFin')
+        ;
+    }
+}
