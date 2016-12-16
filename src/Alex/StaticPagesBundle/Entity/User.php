@@ -23,11 +23,39 @@ class User extends  BaseUser
      */
     protected $id;
 
+
+    /**
+
+     * @var string
+     *
+     * @ORM\Column(name="twitname", type="string", length=255)
+     */
+    protected $twitname;
+
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
     }
+
+    /**
+     * @return string
+     */
+    public function getTwitname()
+    {
+        return $this->twitname;
+    }
+
+    /**
+     * @param string $twitname
+     */
+    public function setTwitname($twitname)
+    {
+        $this->twitname = $twitname;
+    }
+
+
 
 
 }

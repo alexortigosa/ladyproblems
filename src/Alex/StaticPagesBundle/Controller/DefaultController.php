@@ -140,17 +140,34 @@ class DefaultController extends Controller
     public function twittsAction(){
         $twitter = $this->get('alex_custom.twitter');
 
-        // Retrieve the user's timeline
-        $tweets = $twitter->getTimeline(array(
-            'count' => 5
-        ));
 
         // Or retrieve the timeline using the generic query method
-        $response = $twitter->query('statuses/mentions_timeline', 'GET', 'json');
+        $response = $twitter->query('search/tweets', 'GET', 'json',array(
+            "q" => "@el_ideal_bar"
+        ));
         $tweets = json_decode($response->getContent());
         return $this->render('AlexStaticPagesBundle:tweets:lista.html.twig',
             array("breadcrumbs" => "asd",
-                "twets" => Utils::getMentionsUsers($tweets)));
+                "twets" => Utils::getUsersAndDates($tweets)));
+
+    }
+
+    public function sorteosAction(){
+            $consumiciones=array();
+            $sorteos = $this->getDoctrine()
+            ->getRepository('AlexStaticPagesBundle:Sorteo')
+            ->findAllWithCustomers();
+            foreach ($sorteos as $sorteo){
+                $consumiciones[$sorteo->getId()]=array();
+                foreach ($sorteo->getParticipantes() as $consumicion){
+                    array_push($consumiciones[$sorteo->getId()],$consumicion->getUsuario());
+
+                }
+            }
+        return $this->render('AlexStaticPagesBundle:Sorteo:sorteos.html.twig',
+            array("breadcrumbs" => "asd",
+                "sorteos" => $sorteos,
+                "consumiciones" => $consumiciones));
 
     }
 

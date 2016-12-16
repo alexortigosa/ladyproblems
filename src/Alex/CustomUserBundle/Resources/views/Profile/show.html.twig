@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block fos_user_content %}
+
+{% endblock fos_user_content %}
+
+
+{% block customcss %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/login/registro.css') }}"/>
+{% endblock %}
+{% block contenido %}
+    <div id="customReg" class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    {% trans from 'trans' %}Mi perfil{% endtrans %}
+                </div>
+                <div class="panel-body">
+                    {% include "FOSUserBundle:Profile:show_content.html.twig" %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

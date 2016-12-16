@@ -16,6 +16,14 @@ services:
             - { name: sonata.admin, manager_type: orm, label: Consumición }
           arguments: [null, Alex\StaticPagesBundle\Entity\Consumicion, null]
 
+    app.admin.user:
+              class:  Alex\StaticPagesBundle\Admin\UserAdmin
+              tags:
+                - { name: sonata.admin, manager_type: orm, label: Usuarios }
+              arguments: [null, Alex\StaticPagesBundle\Entity\User, null]
+
+    app.userControler:
+      class: Alex\StaticPagesBundle\Controller\UserController
 
 
 

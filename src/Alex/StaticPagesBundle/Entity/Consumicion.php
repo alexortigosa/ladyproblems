@@ -27,6 +27,7 @@ class Consumicion
      * @var string
      *
      * @ORM\Column(name="articulo", type="string", length=255)
+     *
      */
     private $articulo;
 
@@ -48,8 +49,9 @@ class Consumicion
 
     /**
      * @var int
-     ** @ORM\ManyToOne(targetEntity="Sorteo")
+     ** @ORM\ManyToOne(targetEntity="Sorteo", inversedBy="participantes")
      * @ORM\JoinColumn(name="sorteo", referencedColumnName="id")
+     *
      */
     private $sorteo;
 
@@ -181,6 +183,12 @@ class Consumicion
     public function setGanador($ganador)
     {
         $this->ganador = $ganador;
+    }
+
+
+    public function __toString()
+    {
+        return (string) $this->getId();
     }
 
 

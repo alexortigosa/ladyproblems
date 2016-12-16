@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+{% block title %} Alex Ortigosa Web - Sistemas E-commerce {% endblock %}
+{% block customcss %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/ecom.css') }}"/>
+{% endblock %}
+{% block contenido %}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>Mis sorteos</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Artículo</th>
+                        <th>Sorteo</th>
+                        <th>Premiado</th>
+                    </tr>
+
+                </thead>
+                <tbody class="table-hover">
+            {% if consumiciones is defined %}
+                {% for consu in consumiciones %}
+                    <tr>
+                        <td>{{ consu.fecha|date('Y-m-d H:i:s') }}</td>
+                        <td>{{ consu.articulo }}</td>
+                        <td>{{ consu.sorteo.id }}</td>
+                        <td>{% if consu.ganador == 0 %} No {% else %} Si {% endif %}</td>
+                    </tr>
+
+                {% endfor %}
+            {% endif %}
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block customjs %}
+    {{ parent() }}
+    <script>
+        function goToGraph(){
+            $('#myTabs li:eq(1) a').tab('show');
+        }
+        function euqalHeightintabs(){
+            var maxHeight=0;
+            $("#myTabs .tab-pane").each(function () {
+                var tabHeight=$(this).height();
+                if(tabHeight>maxHeight)
+                    maxHeight=tabHeight;
+            });
+            $("#myTabs .tab-pane").each(function () {
+                $(this).height(maxHeight);
+            });
+
+        }
+    </script>
+{% endblock %}
+{% block jsready %}
+    euqalHeightintabs();
+    selectedMenuSer("buttonservice");
+{% endblock %}

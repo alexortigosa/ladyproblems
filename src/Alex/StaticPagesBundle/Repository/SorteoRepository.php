@@ -10,4 +10,21 @@ namespace Alex\StaticPagesBundle\Repository;
  */
 class SorteoRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAllWithCustomers()
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT s FROM AlexStaticPagesBundle:Sorteo s
+                  ORDER BY s.fechaInicio DESC'
+            )
+            ->getResult();
+    }
+
+    public function findAllOfCustomer($id_customer)
+    {
+        $query = $this->getEntityManager()->createQuery('SELECT c FROM AlexStaticPagesBundle:Consumicion c 
+                                                         WHERE c.usuario = ?1');
+        $query->setParameter(1,$id_customer);
+        return $query->getResult();
+    }
 }

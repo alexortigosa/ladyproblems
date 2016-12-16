@@ -2,6 +2,7 @@
 
 namespace Alex\StaticPagesBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -34,6 +35,20 @@ class Sorteo
      * @ORM\Column(name="fechaFin", type="datetime", nullable=true)
      */
     private $fechaFin;
+
+    /**
+     * One Product has Many Features.
+     * @ORM\OneToMany(targetEntity="Consumicion", mappedBy="sorteo")
+     */
+    private $participantes;
+
+    /**
+     * Sorteo constructor.
+     */
+    public function __construct()
+    {
+        $this->participantes = new ArrayCollection();
+    }
 
 
     /**
@@ -93,6 +108,24 @@ class Sorteo
     {
         return $this->fechaFin;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getParticipantes()
+    {
+        return $this->participantes;
+    }
+
+    /**
+     * @param mixed $participantes
+     */
+    public function setParticipantes($participantes)
+    {
+        $this->participantes = $participantes;
+    }
+
+
 
     public function __toString()
     {

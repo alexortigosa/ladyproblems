@@ -18,4 +18,15 @@ class Utils
         }
         return $res;
     }
+    static public function getUsersAndDates($twits){
+        $res=array();
+        foreach ($twits->statuses as $t){
+            array_push($res,array(
+                "user" => $t->user->screen_name,
+                "fecha" => $t->created_at
+                )
+            );
+        }
+        return $res;
+    }
 }

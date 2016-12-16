@@ -49,4 +49,12 @@ alex_static_pages_qr:
 alex_static_pages_tweet_list:
     path:     /tweetlist
     defaults: { _controller: AlexStaticPagesBundle:Default:twitts }
-
+alex_static_pages_sorteos:
+    path:     /sorteos
+    defaults: { _controller: AlexStaticPagesBundle:Default:sorteos }
+alex_static_pages_update_users:
+    path:     /update
+    defaults: { _controller: AlexStaticPagesBundle:User:asignarteguntwit }
+alex_static_pages_users_sorteos:
+    path:     /missorteos
+    defaults: { _controller: AlexStaticPagesBundle:User:muestratorneos }

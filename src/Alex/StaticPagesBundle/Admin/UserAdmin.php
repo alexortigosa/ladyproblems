@@ -3,33 +3,36 @@
  * Created by PhpStorm.
  * User: alexandreortigosa
  * Date: 15/12/2016
- * Time: 14:41
+ * Time: 19:32
  */
 
 namespace Alex\StaticPagesBundle\Admin;
 
 
-use Alex\StaticPagesBundle\Entity\Sorteo;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 
-class SorteoAdmin extends Admin
+
+class UserAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('fechaInicio', 'date', array(
-                'label' => 'Fecha inicio'
+            ->add('username', null, array(
+                'label' => 'Nombre de Usuario'
             ))
-            ->add('fechaFin', 'date', array(
-                'label' => 'Fecha Fin'
+            ->add('email', null, array(
+                'label' => 'Email'
             ))
-            ->add('participantes', null, array(
-                'label' => 'Participantes'
+            ->add('password', null, array(
+                'label' => 'Pass'
+            ))
+            ->add('twitname', null, array(
+                'label' => 'Twitter account'
             ))
 
             // if no type is specified, SonataAdminBundle tries to guess it
@@ -43,8 +46,8 @@ class SorteoAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('fechaInicio')
-            ->add('fechaFin')
+            ->add('username')
+            ->add('email')
         ;
     }
 
@@ -53,8 +56,8 @@ class SorteoAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
-            ->add('fechaInicio')
-            ->add('fechaFin')
+            ->add('username')
+            ->add('email')
         ;
     }
 
@@ -63,8 +66,8 @@ class SorteoAdmin extends Admin
     {
         $showMapper
             ->add('id')
-            ->add('fechaInicio')
-            ->add('FechaFin')
+            ->add('username')
+            ->add('email')
         ;
     }
 }
