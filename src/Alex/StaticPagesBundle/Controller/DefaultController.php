@@ -135,16 +135,17 @@ class DefaultController extends Controller
         $url;
         if($idcon<0){
             $url=$this->generateUrl(
-                'alex_static_pages_contact_fail');
+                'alex_static_pages_contact_fail',true);
         }
         else{
             $url=$this->generateUrl(
-                'urlvalidate',
+                'alex_static_pages_qr_validation',
                 array('idcon' => $idcon)
-            );
+            ,true);
         }
         return $this->render('AlexStaticPagesBundle:User:myqr.html.twig',
-            array("breadcrumbs" => "asd"));
+            array("breadcrumbs" => "asd",
+                    'urlvalidation' => "http://localhost:8000".$url));
 
     }
     public function qrvalidateAction($idcon=-1)

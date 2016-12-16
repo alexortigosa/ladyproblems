@@ -26,7 +26,7 @@
                         <td>{{ consu.fecha|date('Y-m-d H:i:s') }}</td>
                         <td>{{ consu.articulo }}</td>
                         <td>{{ consu.sorteo.id }}</td>
-                        <td>{% if consu.ganador == 0 %} No</td><td></td> {% else %} Si</td><td> <button class="btn btn-primary" href="">Mostrar</button> {% endif %} </td>
+                        <td>{% if consu.ganador == 0 %} No</td><td></td> {% else %} Si</td><td> <a class="btn btn-primary" href="{{ path('alex_static_pages_qr',{'idcon' : consu.id}) }}">Mostrar</a> {% endif %} </td>
                     </tr>
 
                 {% endfor %}
