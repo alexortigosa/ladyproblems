@@ -33,6 +33,9 @@ class ConsumicionAdmin extends Admin
             ->add('articulo', null, array(
                 'label' => 'Articulo'
             ))
+            ->add('ganador', null, array(
+                'label' => 'Es ganador?'
+            ))
 
             // if no type is specified, SonataAdminBundle tries to guess it
             //->add('body')

@@ -7,34 +7,7 @@
 {% block contenido %}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1>Mis sorteos</h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Artículo</th>
-                        <th>Sorteo</th>
-                        <th>Premiado</th>
-                        <th></th>
-                    </tr>
-
-                </thead>
-                <tbody class="table-hover">
-            {% if consumiciones is defined %}
-                {% for consu in consumiciones %}
-                    <tr>
-                        <td>{{ consu.fecha|date('Y-m-d H:i:s') }}</td>
-                        <td>{{ consu.articulo }}</td>
-                        <td>{{ consu.sorteo.id }}</td>
-                        <td>{% if consu.ganador == 0 %} No</td><td></td> {% else %} Si</td><td> <button class="btn btn-primary" href="">Mostrar</button> {% endif %} </td>
-                    </tr>
-
-                {% endfor %}
-            {% endif %}
-                </tbody>
-            </table>
-
-
+            <h1>Lectura incorrecta</h1>
         </div>
     </div>
 

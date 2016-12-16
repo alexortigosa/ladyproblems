@@ -44,8 +44,11 @@ alex_static_pages_lang_es:
     path:     /espanol
     defaults: { _controller: AlexStaticPagesBundle:Lenguage:spanish }
 alex_static_pages_qr:
-    path:     /qr
+    path:     /qr/{idcon}
     defaults: { _controller: AlexStaticPagesBundle:Default:qr }
+alex_static_pages_qr_validation:
+    path:     /qrvalidation/{idcon}
+    defaults: { _controller: AlexStaticPagesBundle:Default:qrvalidate }
 alex_static_pages_tweet_list:
     path:     /tweetlist
     defaults: { _controller: AlexStaticPagesBundle:Default:twitts }

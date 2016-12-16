@@ -130,10 +130,31 @@ class DefaultController extends Controller
         return $this->render('AlexStaticPagesBundle:contacto:failedform.html.twig',array("breadcrumbs" => $this->getBreadCrumb("contacto")));
     }
 
-    public function qrAction()
+    public function qrAction($idcon=-1)
     {
+        $url;
+        if($idcon<0){
+            $url=$this->generateUrl(
+                'alex_static_pages_contact_fail');
+        }
+        else{
+            $url=$this->generateUrl(
+                'urlvalidate',
+                array('idcon' => $idcon)
+            );
+        }
         return $this->render('AlexStaticPagesBundle:User:myqr.html.twig',
             array("breadcrumbs" => "asd"));
+
+    }
+    public function qrvalidateAction($idcon=-1)
+    {
+        if($c=$this->getDoctrine()->getRepository('AlexStaticPagesBundle:Consumicion')->find($idcon))
+            return $this->render('@AlexStaticPages/Consumicion/validacionok.html.twig',
+                array("breadcrumbs" => "asd"));
+        else
+            return $this->render('@AlexStaticPages/Consumicion/validacionfail.html.twig',
+                array("breadcrumbs" => "asd"));
 
     }
 
