@@ -25,5 +25,11 @@ services:
     app.userControler:
       class: Alex\StaticPagesBundle\Controller\UserController
 
+      app.customform.registration:
+                  class: Alex\StaticPagesBundle\Form\RegistrationType
+                  tags:
+                      - { name: form.type, alias: app_user_registration }
+
+
 
 

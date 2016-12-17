@@ -145,7 +145,7 @@ class DefaultController extends Controller
         }
         return $this->render('AlexStaticPagesBundle:User:myqr.html.twig',
             array("breadcrumbs" => "asd",
-                    'urlvalidation' => "http://localhost:8000".$url));
+                    'urlvalidation' => "http://elidealbar.alexortigosa.es".$url));
 
     }
     public function qrvalidateAction($idcon=-1)
