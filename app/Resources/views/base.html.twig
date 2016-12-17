@@ -1,178 +1,93 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>{% block title %}Alex Ortigosa Web{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="author" content="Alex Ortigos">
        {% block customcss %}
-           <link href="https://fonts.googleapis.com/css?family=Oranienbaum" rel="stylesheet">
-           <link rel="stylesheet" href="{{ asset('assets/normalize.css') }}"/>
-           <link rel="stylesheet" href="{{ asset('assets/vendor/flag-icon-css/css/flag-icon.min.css') }}"/>
-           <link rel="stylesheet" href="{{ asset('assets/boots/css/bootstrap.css') }}"/>
-           <link rel="stylesheet" href="{{ asset('assets/boots/css/bootstrap-theme.css') }}"/>
-           <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/socialicious.css') }}" media="screen" />
-           <link rel="stylesheet" href="{{ asset('assets/global.css') }}"/>
+           <!-- Bootstrap Core CSS -->
+           <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+
+           <!-- Custom CSS -->
+           <link href="{{ asset('assets/css/business-casual.css') }}" rel="stylesheet">
+
+           <!-- Fonts -->
+           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+           <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
        {% endblock %}
     </head>
     <body>
-        <div id="page" class="container-fluid">
-            <div id="header" class="row container-fluid">
-                <div class="row ">
-                    <nav id="menunav" class="navbar navbar-default navbar-fixed-top">
-                        <div class="container-fluid">
-                            <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand" href="#"><img src="{{ asset('assets/img/header/aolognew.png') }}" class="img-responsive" alt="Responsive image"/></a>
-                            </div>
-                            <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                {% include 'AlexStaticPagesBundle:Lenguage:lenguageform.html.twig' %}
-                                {% include '@AlexCustomUser/Custom/loginheader.html.twig' %}
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li id="buttonhome" ><a href="{{ url('alex_static_pages_homepage')}}">{% trans from "trans"%}Inicio{% endtrans %}</a></li>
-                                    <li id="buttonservice" class="dropdown">
-                                        <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans from "trans"%}Servicios{% endtrans %} <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="{{ url('alex_static_pages_ecomerce')}}">{% trans from "trans"%}E-commerce{% endtrans %}</a></li>
-                                            <li role="separator" class="divider"></li>
-                                            <li><a href="{{ url('alex_static_pages_medida')}}">{% trans from "trans"%}Programación a medida{% endtrans %}</a></li>
-                                            <li role="separator" class="divider"></li>
-                                            <!--<li><a href="{{ url('alex_static_pages_integration')}}">{% trans from "trans"%}Integración de sistemas{% endtrans %}</a></li>-->
-                                        </ul>
-                                    </li>
-                                    <li id="buttonSorteo"><a href="{{ url('alex_static_pages_sorteos') }}">Sorteos</a></li>
-                                    <li id="buttonquien"><a  href="{{ url('alex_static_pages_about')}}">{% trans from "trans"%}Sobre nosotros{% endtrans %}</a></li>
-                                    <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">{% trans from "trans"%}Contacta{% endtrans %}</a></li>
-                                </ul>
-                            </div><!-- /.navbar-collapse -->
-                        </div><!-- /.container-fluid -->
-                    </nav>
-                </div>
+    <div class="brand">El ideal Bar</div>
+    <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
 
-                <div id="headerbottom" class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                        <!--<ol class="breadcrumb">
-                        {% if breadcrumbs is defined %}
-                            {% for breadcrumb in breadcrumbs %}
-                                <li><a href="{% if breadcrumb[1] != "#" %}{{ url(breadcrumb[1]) }}{% else %}#{% endif %}"></a>{{ breadcrumb[0] }}</li>
-                            {% endfor %}
-                         {% endif %}
-                        </ol>
-                        -->
-                    </div>
-                    {% block slider %}
-
-                    {% endblock %}
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">Business Casual</a>
             </div>
-            <div id="content" class="row container-fluid">
-                <div id="colum_left" class="col-sm-1 col-md-1 col-lg-1">
-                </div>
-                <div id="center_column" class="col-xs-12 col-sm-12 col-md-10 col-lg-10" >
-                    <div class="row">
-                            {% block contenido %}
-                            {% endblock %}
-                    </div>
-                </div>
-                <div id="colum_right" class="col-sm-1 col-md-1 col-lg-1">
-
-                </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                {% include '@AlexCustomUser/Custom/loginheader.html.twig' %}
+                <ul class="nav navbar-nav">
+                    <li id="buttonhome" ><a href="{{ url('alex_static_pages_homepage')}}">{% trans from "trans"%}Inicio{% endtrans %}</a></li>
+                    <li id="buttonSorteo"><a href="{{ url('alex_static_pages_sorteos') }}">Sorteos</a></li>
+                    <li id="buttonquien"><a  href="{{ url('alex_static_pages_about')}}">{% trans from "trans"%}Sobre nosotros{% endtrans %}</a></li>
+                    <li id="buttoncontact"><a  href="{{ url('alex_static_pages_contact')}}">{% trans from "trans"%}Contacta{% endtrans %}</a></li>
+                </ul>
             </div>
-            <div id="footer" class="row container-fluid">
-                <div id="foot_col_1" class="col-lg-3 col-md-3 col-xs-12 col-sm-12 ">
-                    <div class="list-group">
-                        <a href="{{ url('alex_static_pages_homepage')}}"  class="list-group-item">Inicio</a>
-                        <a href="{{ url('alex_static_pages_map') }}" class="list-group-item">Mapa Web</a>
-                        <a href="{{ url('alex_static_pages_about')}}" class="list-group-item">Misión y visión</a>
-                        <!--<a href="#" class="list-group-item">Terminos de uso</a>-->
-                    </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+        {% block slider %}
 
-                </div>
-                <div id="foot_col_2" class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <div class="list-group">
-                                <a href="https://www.facebook.com/aotechbcn"> <button type="button" class="list-group-item"><i class="icon-2x icon-facebook"></i><p>Facebook</p></button></a>
-                                <a href="https://github.com/alexortigosa"> <button type="button" class="list-group-item"><i class="icon-2x icon-github"></i><p>GitHub</p></button></a>
-                                <a href="https://plus.google.com/u/0/b/104219457877063308351/104219457877063308351/about"><button type="button" class="list-group-item"><i class="icon-2x icon-googleplus"></i><p>Google Plus</p></button></a>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <div class="list-group">
-                                <a href="https://es.linkedin.com/in/alexandre-ortigosa-barragan-689a9243"> <button type="button" class="list-group-item"><i class="icon-2x icon-linkedin"></i><p>Linkedin</p></button></a>
-                                <a href="https://twitter.com/aotechbcn"> <button type="button" class="list-group-item"><i class="icon-2x icon-twitter"></i><p>Twitter</p></button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="foot_col_3" class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                    <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 embed-responsive embed-responsive-4by3">
-                        <iframe id="mapsiframe" class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.4475622407467!2d2.072895415382243!3d41.36435990538533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49967b8061e63%3A0x45d47aaabacd85ac!2sCarrer+de+Josep+Feliu+i+Codina%2C+3%2C+08940+Cornell%C3%A0+de+Llobregat%2C+Barcelona!5e0!3m2!1ses!2ses!4v1473678536983" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>-->
-                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 dirclass">
-                        <div class="panel panel-primary">
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <a href="#">
-                                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                                                </a>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading">{% trans from "trans"%}Dirección{% endtrans %}</h4>
-                                                <p>Calle Feliu i Codina,3</p>
-                                                <p>Cornella de Llobregat</p>
-                                                <p>Barcelona, 08940</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <a href="#">
-                                                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                                                </a>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading">{% trans from "trans"%}Correo electrónico{% endtrans %}</h4>
-                                                <p>alexandre.ortigosa@gmail.com</p>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <a href="#">
-                                                    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                                                </a>
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading">{% trans from "trans"%}Teléfono{% endtrans %}</h4>
-                                                <p>+34 638 41 99 29</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="{{ asset('assets/img/header/aolognew.png') }}" class="img-responsive vertical-align" alt="Responsive image"/>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <p class="text-center">Copyright by Alexandre Ortigosa Barragan<span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span></p>
+        {% endblock %}
+
+        {% block contenido %}
+        {% endblock %}
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Alex Ortigosa 2016</p>
                 </div>
             </div>
         </div>
-        {% block customjs %}
-            <script type="text/javascript" src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('assets/vendor/jquery/dist/jquery.slim.min.js') }}"></script>
+    </footer>
 
-            <script type="text/javascript" src="{{ asset('assets/boots/js/bootstrap.js') }}"></script>
+
+        {% block customjs %}
+            <!-- jQuery -->
+            <script src="{{ asset('assets/js/jquery.js') }}"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+
+            <!-- Script to Activate the Carousel -->
+            <script>
+                $('.carousel').carousel({
+                    interval: 5000 //changes the speed
+                })
+            </script>
        {% endblock %}
         <script>
             $(document).ready(function(){
