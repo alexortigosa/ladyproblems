@@ -37,24 +37,9 @@
 {% block customjs %}
     {{ parent() }}
     <script>
-        function goToGraph(){
-            $('#myTabs li:eq(1) a').tab('show');
-        }
-        function euqalHeightintabs(){
-            var maxHeight=0;
-            $("#myTabs .tab-pane").each(function () {
-                var tabHeight=$(this).height();
-                if(tabHeight>maxHeight)
-                    maxHeight=tabHeight;
-            });
-            $("#myTabs .tab-pane").each(function () {
-                $(this).height(maxHeight);
-            });
 
-        }
     </script>
 {% endblock %}
 {% block jsready %}
-    euqalHeightintabs();
-    selectedMenuSer("buttonservice");
+    selectedMenuSer("buttonSorteo");
 {% endblock %}
