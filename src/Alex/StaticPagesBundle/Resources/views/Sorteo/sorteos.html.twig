@@ -2,7 +2,6 @@
 {% block title %} Alex Ortigosa Web - Sorteos {% endblock %}
 {% block customcss %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('assets/css/ecom.css') }}"/>
 {% endblock %}
 {% block contenido %}
 
@@ -10,23 +9,24 @@
     <div class="box">
         <div class="col-lg-12">
 
-            <h1>Sorteos <small style="color: #2ed2d2;"> Gana tu consumición gratis</small></h1>
-
+            <h1>Sorteos <small> Gana tu consumición gratis</small></h1>
+            <div class="row">
             {% if sorteos is defined %}
                 {% for sorteo in sorteos %}
-                    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                    <div class="col-md-6 col-lg-6">
                         <h2>Sorteo de fecha <span class="small" style="color:black;">{{ sorteo.fechaInicio|date('Y-m-d') }}</span> </h2>
                         {% if consumiciones is defined %}
                             <ul class="list-group">
-                                <li class="list-group-item">fecha {{ sorteo.fechaInicio|date('Y-m-d') }}</li>
-                            {% for user in consumiciones[sorteo.id]%}
-                                <li class="list-group-item">{{ user.username }}</li>
+                            {% for key,value in consumiciones[sorteo.id]%}
+
+                                <li class="list-group-item">@{{ key }} <span class="badge">{{ value }} Participaciones</span></li>
                             {% endfor %}
                             </ul>
                         {% endif %}
                     </div>
                 {% endfor %}
             {% endif %}
+            </div>
         </div>
     </div>
 </div>

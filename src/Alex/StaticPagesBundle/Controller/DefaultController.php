@@ -182,9 +182,9 @@ class DefaultController extends Controller
             foreach ($sorteos as $sorteo){
                 $consumiciones[$sorteo->getId()]=array();
                 foreach ($sorteo->getParticipantes() as $consumicion){
-                    array_push($consumiciones[$sorteo->getId()],$consumicion->getUsuario());
-
+                    array_push($consumiciones[$sorteo->getId()],$consumicion->getUsuario()->getTwitname());
                 }
+                $consumiciones[$sorteo->getId()]=array_count_values($consumiciones[$sorteo->getId()]);
             }
         return $this->render('AlexStaticPagesBundle:Sorteo:sorteos.html.twig',
             array("breadcrumbs" => "asd",
