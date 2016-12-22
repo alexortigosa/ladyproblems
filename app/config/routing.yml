@@ -42,3 +42,9 @@ admin_area:
     prefix: /{_locale}/admin
     requirements:
       _locale: en|es
+# app/config/routing.yml
+fos_user_group:
+    resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+    prefix: /{_locale}/group
+    requirements:
+      _locale: en|es

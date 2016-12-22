@@ -83,6 +83,9 @@ fos_user:
     registration:
             form:
                 type: Alex\StaticPagesBundle\Form\RegistrationType
+    group:
+      group_class: Alex\StaticPagesBundle\Entity\Group
+
 sonata_block:
     default_contexts: [cms]
     blocks:
@@ -106,6 +109,8 @@ endroid_twitter:
     consumer_secret: "LKHEyUF1yFRHOQ8H6LfQ2syrwEYj3xRZGFKSqm5qQMCrYsrlum"
     access_token: "794499881410953217-lUgFFXD5GmDunyzqXiBq6rIIPELUsEX"
     access_token_secret: "e7Q5qZaT6DwsvJnSoL34T318OsjMNv3qL94psVcScDDp3"
+alex_staticpages:
+    account_sync: "@aotechbcn"
 
 
 

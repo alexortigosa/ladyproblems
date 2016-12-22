@@ -32,6 +32,15 @@ class User extends  BaseUser
      */
     protected $twitname;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Alex\StaticPagesBundle\Entity\Group")
+     * @ORM\JoinTable(name="user_user_group",
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
+     * )
+     */
+    protected $groups;
+
 
     public function __construct()
     {
@@ -53,6 +62,22 @@ class User extends  BaseUser
     public function setTwitname($twitname)
     {
         $this->twitname = $twitname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
+
+    /**
+     * @param mixed $groups
+     */
+    public function setGroups($groups)
+    {
+        $this->groups = $groups;
     }
 
 

@@ -29,6 +29,11 @@ services:
                   class: Alex\StaticPagesBundle\Form\RegistrationType
                   tags:
                       - { name: form.type, alias: app_user_registration }
+    app.syncrostrategy:
+      class: Alex\StaticPagesBundle\Utils\ISyncroStrategy
+    app.syncrofunction:
+      class: Alex\StaticPagesBundle\Utils\Syncronitzation
+      arguments: ['%alex.static.accountsync%',Alex\StaticPagesBundle\Utils\SyncroTwitterStrategy,'@service_container']
 
 
 
