@@ -150,9 +150,9 @@ class DefaultController extends Controller
     }
     public function qrvalidateAction($idcon=-1)
     {
-        if($c=$this->getDoctrine()->getRepository('AlexStaticPagesBundle:Consumicion')->findBy(array(
-            "id" => $idcon,
-            "ganador" => 1
+        if(null !== $c=$this->getDoctrine()->getRepository('AlexStaticPagesBundle:Consumicion')->findBy(array(
+            'id' => $idcon,
+            'ganador' => 1
         )))
             return $this->render('@AlexStaticPages/Consumicion/validacionok.html.twig',
                 array(
