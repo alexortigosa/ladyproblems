@@ -1,6 +1,7 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
+    access_denied_url: fos_user_security_login
     encoders:
       FOS\UserBundle\Model\UserInterface: bcrypt
 
@@ -15,8 +16,10 @@ security:
             security: false
         main:
           pattern: ^/
+          access_denied_handler: app.security.access_denied_handler
           form_login:
             provider: fos_userbundle
+            login_path: fos_user_security_login
             csrf_token_generator: security.csrf.token_manager
             check_path: fos_user_security_check
             failure_path: fos_user_security_login
@@ -32,8 +35,8 @@ security:
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
     access_control:
-      - { path: ^/[a-z]/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-      - { path: ^/[a-z]/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-      - { path: ^/[a-z]/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-      - { path: ^/[a-z]/admin/, role: ROLE_SUPER_ADMIN }
-      - { path: ^/[a-z]/profile/, role: ROLE_SUPER_ADMIN }
+      - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/admin/, role: ROLE_ADMIN }
+      - { path: ^/profile/, role: ROLE_ADMIN }

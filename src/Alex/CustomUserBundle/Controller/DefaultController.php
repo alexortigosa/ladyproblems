@@ -11,6 +11,10 @@ class DefaultController extends Controller
         return $this->render('AlexCustomUserBundle:Default:index.html.twig');
     }
 
+    public function denegadoAction()
+    {
+        return $this->render('AlexCustomUserBundle:Security:denyaccess.html.twig');
+    }
 
 
 

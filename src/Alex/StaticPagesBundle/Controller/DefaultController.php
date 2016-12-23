@@ -152,10 +152,15 @@ class DefaultController extends Controller
     {
         if($c=$this->getDoctrine()->getRepository('AlexStaticPagesBundle:Consumicion')->find($idcon))
             return $this->render('@AlexStaticPages/Consumicion/validacionok.html.twig',
-                array("breadcrumbs" => "asd"));
+                array(
+                    "breadcrumbs" => "asd",
+                    "consumicion" => $c
+                ));
         else
             return $this->render('@AlexStaticPages/Consumicion/validacionfail.html.twig',
-                array("breadcrumbs" => "asd"));
+                array(
+                    "breadcrumbs" => "asd",
+                    "consumicion" => $c));
 
     }
 

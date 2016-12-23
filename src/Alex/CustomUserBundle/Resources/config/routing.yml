@@ -1,3 +1,6 @@
 prueba_path:
   path: /aver
   defaults: {_controller: AlexCustomUserBundle:Default:index}
+acceso_denagado_path:
+  path: /denegado
+  defaults: {_controller: AlexCustomUserBundle:Default:denegado}

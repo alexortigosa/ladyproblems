@@ -64,21 +64,6 @@ class User extends  BaseUser
         $this->twitname = $twitname;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getGroups()
-    {
-        return $this->groups;
-    }
-
-    /**
-     * @param mixed $groups
-     */
-    public function setGroups($groups)
-    {
-        $this->groups = $groups;
-    }
 
 
 

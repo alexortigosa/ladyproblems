@@ -4,6 +4,9 @@ services:
     arguments:  ['service_container', 'router']
     tags:
       - {name: 'monolog.logger', chanel: 'security'}
+  app.security.access_denied_handler:
+    class: Alex\CustomUserBundle\Services\AccessDeniedHandler
+    arguments: ['@router']
 #    alex.customuser.example:
 #        class:     Alex\CustomUserBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]

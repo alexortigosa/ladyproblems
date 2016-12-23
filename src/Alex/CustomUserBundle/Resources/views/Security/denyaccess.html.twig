@@ -1,0 +1,17 @@
+
+{% extends "::base.html.twig" %}
+{% block customcss %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/login/login.css') }}"/>
+{% endblock %}
+
+{% block contenido %}
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <h1>Acceso denegado</h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}
