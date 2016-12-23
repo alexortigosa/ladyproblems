@@ -95,6 +95,7 @@ sonata_block:
         # ...
 sonata_admin:
   title:  BarLore
+
 endroid_qr_code:
     size: 100
     padding: 10

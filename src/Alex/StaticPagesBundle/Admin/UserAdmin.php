@@ -34,6 +34,9 @@ class UserAdmin extends Admin
             ->add('twitname', null, array(
                 'label' => 'Twitter account'
             ))
+            ->add('roles', null, array(
+                'label' => 'Roles'
+            ))
 
             // if no type is specified, SonataAdminBundle tries to guess it
             //->add('body')
