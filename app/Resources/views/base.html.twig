@@ -19,14 +19,10 @@
         body {
             font: 400 15px/1.8 Lato, sans-serif;
             color: #777;
-            margin-top: 20%;
+
 
         }
-        @media screen and (min-width: 970px) {
-            body{
-                margin-top: 12%;
-            }
-        }
+
         h3, h4 {
             margin: 10px 0 30px 0;
             letter-spacing: 10px;
@@ -296,6 +292,8 @@
                 });
             } // End if
         });
+
+        $('body').css('margin-top',$('.navbar').height()+10);
     })
 </script>
 {% endblock %}
