@@ -19,6 +19,7 @@
         body {
             font: 400 15px/1.8 Lato, sans-serif;
             color: #777;
+            padding-top: 60px;
         }
         h3, h4 {
             margin: 10px 0 30px 0;
@@ -160,17 +161,7 @@
     {% endblock %}
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-<div >
-    {% if app.request.hasPreviousSession %}
-    {% for type, messages in app.session.flashbag.all() %}
-        {% for message in messages %}
-            <div class="flash-{{ type }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endfor %}
-    {% endif %}
-</div>
+
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -195,6 +186,19 @@
         </div>
     </div>
 </nav>
+
+    {% if app.request.hasPreviousSession %}
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+<div >
+                <div class="flash-{{ type }}">
+                    {{ message }}
+                </div>
+</div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
 
 {% block contenido %}
     <!-- CAROUSEL-->
