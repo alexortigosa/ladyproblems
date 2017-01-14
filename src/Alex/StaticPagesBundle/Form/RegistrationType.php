@@ -11,13 +11,20 @@ namespace Alex\StaticPagesBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 
 class RegistrationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('twitname',null,array('label' => 'Cuenta de tweeter'));
+        $builder->add('sexo', ChoiceType::class, array(
+            'choices' => array(
+                'Male' => 'H',
+                'Female' => 'M',
+            ),
+        ))->add('edad')
+            ->add('numhijos');
 
     }
 

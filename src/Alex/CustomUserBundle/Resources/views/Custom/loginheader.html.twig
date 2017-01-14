@@ -1,16 +1,10 @@
-<ul class="nav navbar-nav">
+
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
         <li>
             <a href="">
         {% trans from "trans" %}Hola{% endtrans %} {{ app.user.username }}
             </a>
         </li>
-        <li>
-            <a href="{{ path('alex_static_pages_users_sorteos') }}">
-                {% trans from "trans" %}Mis sorteos{% endtrans %}
-            </a>
-        </li>
-
         <li>
 
             <a href="{{ path('fos_user_security_logout') }}">
@@ -22,14 +16,6 @@
             <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
 
         </li>
+        <li><a href="{{ path('fos_user_registration_register')}}">REGISTRO</a></li>
     {% endif %}
-</ul>
-{% if app.request.hasPreviousSession %}
-    {% for type, messages in app.session.flashbag.all() %}
-        {% for message in messages %}
-            <div class="flash-{{ type }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endfor %}
-{% endif %}
+

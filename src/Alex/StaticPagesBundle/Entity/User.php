@@ -63,7 +63,7 @@ class User extends  BaseUser
      *
      * @ORM\Column(name="tiempo", type="integer")
      */
-    protected $tiempo;
+    protected $tiempo = 0;
 
 
 
