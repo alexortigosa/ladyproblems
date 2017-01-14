@@ -28,11 +28,6 @@ class Comentario
      */
     private $contenido;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Proyecto")
-     * @ORM\JoinColumn(name="proyecto_id", referencedColumnName="id")
-     */
-    private $proyecto;
 
     /**
      * @ORM\ManyToOne(targetEntity="User")
@@ -77,29 +72,6 @@ class Comentario
         return $this->contenido;
     }
 
-    /**
-     * Set proyecto
-     *
-     * @param string $proyecto
-     *
-     * @return Comentario
-     */
-    public function setProyecto($proyecto)
-    {
-        $this->proyecto = $proyecto;
-
-        return $this;
-    }
-
-    /**
-     * Get proyecto
-     *
-     * @return string
-     */
-    public function getProyecto()
-    {
-        return $this->proyecto;
-    }
 
     /**
      * @return mixed

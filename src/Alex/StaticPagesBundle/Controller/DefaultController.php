@@ -150,16 +150,6 @@ class DefaultController extends Controller
     }
     public function qrvalidateAction($idcon=-1)
     {
-        if(null !== $c=$this->getDoctrine()->getRepository('AlexStaticPagesBundle:Consumicion')->findBy(array(
-            'id' => $idcon,
-            'ganador' => 1
-        )))
-            return $this->render('@AlexStaticPages/Consumicion/validacionok.html.twig',
-                array(
-                    "breadcrumbs" => "asd",
-                    "consumicion" => $c
-                ));
-        else
             return $this->render('@AlexStaticPages/Consumicion/validacionfail.html.twig',
                 array(
                     "breadcrumbs" => "asd",
@@ -184,9 +174,7 @@ class DefaultController extends Controller
 
     public function sorteosAction(){
             $consumiciones=array();
-            $sorteos = $this->getDoctrine()
-            ->getRepository('AlexStaticPagesBundle:Sorteo')
-            ->findAllWithCustomers();
+            $sorteos = null;
             foreach ($sorteos as $sorteo){
                 $consumiciones[$sorteo->getId()]=array();
                 foreach ($sorteo->getParticipantes() as $consumicion){

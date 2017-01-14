@@ -28,7 +28,7 @@ class UserController extends Controller
         if (!is_object($user) || !$user instanceof UserInterface) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }
-        $consumiciones=$this->getDoctrine()->getRepository('AlexStaticPagesBundle:Sorteo')->findAllOfCustomer($user->getId());
+        $consumiciones=null;
 
         return $this->render('@AlexStaticPages/User/mysorteos.html.twig', array(
             'user' => $user,

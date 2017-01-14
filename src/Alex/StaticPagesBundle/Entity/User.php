@@ -28,9 +28,9 @@ class User extends  BaseUser
 
      * @var string
      *
-     * @ORM\Column(name="twitname", type="string", length=255)
+     * @ORM\Column(name="sexo", type="string", length=255)
      */
-    protected $twitname;
+    protected $sexo;
 
     /**
      * @ORM\ManyToMany(targetEntity="Alex\StaticPagesBundle\Entity\Group")
@@ -40,6 +40,31 @@ class User extends  BaseUser
      * )
      */
     protected $groups;
+
+    /**
+
+     * @var int
+     *
+     * @ORM\Column(name="edad", type="integer")
+     */
+    protected $edad;
+
+    /**
+
+     * @var int
+     *
+     * @ORM\Column(name="numhijos", type="integer")
+     */
+    protected $numhijos;
+
+    /**
+
+     * @var int
+     *
+     * @ORM\Column(name="tiempo", type="integer")
+     */
+    protected $tiempo;
+
 
 
     public function __construct()
@@ -51,18 +76,68 @@ class User extends  BaseUser
     /**
      * @return string
      */
-    public function getTwitname()
+    public function getSexo()
     {
-        return $this->twitname;
+        return $this->sexo;
     }
 
     /**
-     * @param string $twitname
+     * @param string $sexo
      */
-    public function setTwitname($twitname)
+    public function setSexo($sexo)
     {
-        $this->twitname = $twitname;
+        $this->sexo = $sexo;
     }
+
+    /**
+     * @return int
+     */
+    public function getEdad()
+    {
+        return $this->edad;
+    }
+
+    /**
+     * @param int $edad
+     */
+    public function setEdad($edad)
+    {
+        $this->edad = $edad;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNumhijos()
+    {
+        return $this->numhijos;
+    }
+
+    /**
+     * @param int $numhijos
+     */
+    public function setNumhijos($numhijos)
+    {
+        $this->numhijos = $numhijos;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTiempo()
+    {
+        return $this->tiempo;
+    }
+
+    /**
+     * @param int $tiempo
+     */
+    public function setTiempo($tiempo)
+    {
+        $this->tiempo = $tiempo;
+    }
+
+
 
 
 
