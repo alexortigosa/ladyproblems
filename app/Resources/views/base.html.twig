@@ -19,7 +19,10 @@
         body {
             font: 400 15px/1.8 Lato, sans-serif;
             color: #777;
+
+
         }
+
         h3, h4 {
             margin: 10px 0 30px 0;
             letter-spacing: 10px;
@@ -160,17 +163,7 @@
     {% endblock %}
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-<div >
-    {% if app.request.hasPreviousSession %}
-    {% for type, messages in app.session.flashbag.all() %}
-        {% for message in messages %}
-            <div class="flash-{{ type }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endfor %}
-    {% endif %}
-</div>
+
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -185,7 +178,6 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ path('alex_static_pages_homepage') }}">HOME</a></li>
-                <li><a href="#">SERVICIOS</a></li>
                 <li><a href="{{ path('alex_static_pages_about') }}">ABOUT US</a></li>
                 <li><a href="{{ path('alex_static_pages_contact') }}">CONTACT</a></li>
                 <li><a href="#">FAQ</a></li>
@@ -195,6 +187,19 @@
         </div>
     </div>
 </nav>
+
+    {% if app.request.hasPreviousSession %}
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+<div >
+                <div class="flash-{{ type }}">
+                    {{ message }}
+                </div>
+</div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
 
 {% block contenido %}
     <!-- CAROUSEL-->
@@ -255,9 +260,7 @@
 
 <!-- Footer -->
 <footer class="text-center">
-    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-    </a><br><br>
+    <br>
     <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p>
 </footer>
 {% block customjs %}
@@ -289,6 +292,8 @@
                 });
             } // End if
         });
+
+        $('body').css('margin-top',$('.navbar').height()+10);
     })
 </script>
 {% endblock %}

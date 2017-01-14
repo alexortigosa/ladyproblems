@@ -1,6 +1,9 @@
 
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
         <li>
+            <a href="{{ path('alex_static_pages_servicios') }}">Servicios</a>
+        </li>
+        <li>
             <a href="">
         {% trans from "trans" %}Hola{% endtrans %} {{ app.user.username }}
             </a>

@@ -1,6 +1,9 @@
 alex_static_pages_homepage:
     path:     /
     defaults: { _controller: AlexStaticPagesBundle:Default:index }
+alex_static_pages_servicios:
+    path:     /servicios/
+    defaults: { _controller: AlexStaticPagesBundle:Default:servicios }
 alex_static_pages_ecomerce:
     path:     /servicios/e-commerce
     defaults: { _controller: AlexStaticPagesBundle:Default:ecom }
