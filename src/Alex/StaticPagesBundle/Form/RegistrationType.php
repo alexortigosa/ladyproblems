@@ -24,7 +24,8 @@ class RegistrationType extends AbstractType
                 'Female' => 'M',
             ),
         ))->add('edad')
-            ->add('numhijos');
+            ->add('numhijos')
+        ->remove('username');
 
     }
 

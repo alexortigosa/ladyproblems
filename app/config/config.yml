@@ -83,6 +83,10 @@ fos_user:
     registration:
             form:
                 type: Alex\StaticPagesBundle\Form\RegistrationType
+                validation_groups: [AcmeRegistration]
+    profile:
+      form:
+        validation_groups: [AcmeProfile]
     group:
       group_class: Alex\StaticPagesBundle\Entity\Group
 

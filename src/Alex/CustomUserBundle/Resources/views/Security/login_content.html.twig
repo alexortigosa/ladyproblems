@@ -9,24 +9,25 @@
     {% if csrf_token %}
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}
+    <p class="tituloPanel text-center"><strong>LOGIN</strong></p>
     <div class="form-group">
         <label for="username" class="control-label">Email address:</label>
         <input type="email" id="username" name="_username" value="{{ last_username }}" required="required" class="form-control" placeholder="{% trans from "trans"%}Email{% endtrans %}">
     </div>
     <div class="form-group">
         <label for="password" class="control-label">Password:</label>
-        <input type="password" id="password" name="_password" required="required" class="form-control" placeholder="{% trans from "trans"%}Contraseña{% endtrans %}">
+        <input type="password" id="password" name="_password" required="required" class="form-control" placeholder="{% trans from "trans"%}Password{% endtrans %}">
     </div>
 
     <div class="form-group">
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />{{ 'security.login.remember_me'|trans }}
+                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />Remember me
                 </label>
             </div>
     </div>
     <div class="form-group">
-        <center><button type="submit" name="submit" class="btn btn-warning ">Enviar</button></center>
+        <center><button type="submit" name="submit" class="btn btn-warning ">Send</button></center>
 
 
         <!--<input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />-->
