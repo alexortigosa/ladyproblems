@@ -1,7 +1,13 @@
 {% extends 'base.html.twig' %}
 {% block customcss %}
     {{ parent() }}
-
+    <style>
+        h3 {
+            font-size: 18px;
+            margin: 10px;
+            letter-spacing: 0.1em;
+        }
+    </style>
 {% endblock %}
 {% block contenido %}
     <div id="band" class="row">
