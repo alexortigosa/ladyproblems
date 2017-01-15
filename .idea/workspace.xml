@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e43308a3-487b-41c8-b306-2ae2cd6e537b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Home/index.html.twig" afterPath="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Home/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/sobrenosotros.html.twig" afterPath="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/sobrenosotros.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/solicitar.html.twig" afterPath="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/solicitar.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/User/valorar.html.twig" afterPath="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/User/valorar.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show.html.twig" afterPath="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show_content.html.twig" afterPath="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show_content.html.twig" />
     </list>
     <list id="b57a4db6-582e-4abb-80c7-548365dc16ff" name="New changelist" comment="" />
     <ignored path="alexweb.iws" />
@@ -28,6 +27,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+              <folding>
+                <element signature="e#5405#5431#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Home/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,33 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="servicios.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/servicios.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-              <folding>
-                <element signature="e#1107#1148#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mispeticiones.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/User/mispeticiones.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="valorar.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="valorar.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/User/valorar.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="30">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="e#5627#5634#1#HTML" expanded="true" />
@@ -96,6 +85,29 @@
                 <element signature="e#5921#5928#1#HTML" expanded="true" />
                 <element signature="e#6019#6026#1#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding>
+                <element signature="e#12#28#0#Twig" expanded="true" />
+                <element signature="e#573#594#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_content.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show_content.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,23 +144,6 @@
             <state relative-caret-position="355">
               <caret line="204" column="8" selection-start-line="204" selection-start-column="6" selection-end-line="204" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Alex/StaticPagesBundle/Controller/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="118" column="69" selection-start-line="118" selection-start-column="69" selection-end-line="118" selection-end-column="69" />
-              <folding>
-                <element signature="e#149#191#0#PHP" expanded="true" />
-                <element signature="e#1573#1605#1#PHP" expanded="true" />
-                <element signature="e#1649#1693#0#PHP" expanded="true" />
-                <element signature="e#3324#3372#0#PHP" expanded="true" />
-                <element signature="e#3523#3570#1#PHP" expanded="true" />
-                <element signature="e#3638#3679#1#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -199,9 +194,7 @@
         <option value="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/config/validation.yml" />
         <option value="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Registration/register_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Sorteo/sorteos.html.twig" />
-        <option value="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show_content.html.twig" />
         <option value="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Custom/loginheader.html.twig" />
-        <option value="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Form/ProfileType.php" />
@@ -215,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Controller/ServicioController.php" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/peticion.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/css/business-casual.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/User/peticiones.html.twig" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/servicios.html.twig" />
@@ -226,6 +218,9 @@
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/sobrenosotros.html.twig" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/Servicios/solicitar.html.twig" />
         <option value="$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/User/valorar.html.twig" />
+        <option value="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       </list>
     </option>
   </component>
@@ -684,6 +679,74 @@
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Profile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ladyproblems" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ladyproblems" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alex" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CustomUserBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Custom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ladyproblems" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ladyproblems" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Alex" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CustomUserBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1023,14 +1086,7 @@
       <workItem from="1484385007417" duration="1104000" />
       <workItem from="1484404391586" duration="4106000" />
       <workItem from="1484408512886" duration="13332000" />
-      <workItem from="1484434320585" duration="22417000" />
-    </task>
-    <task id="LOCAL-00020" summary="ecommerce page">
-      <created>1476296517220</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1476296517220</updated>
+      <workItem from="1484434320585" duration="22689000" />
     </task>
     <task id="LOCAL-00021" summary="pagina de contacto">
       <created>1476298884467</created>
@@ -1368,11 +1424,18 @@
       <option name="project" value="LOCAL" />
       <updated>1484481012982</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="last fixes">
+      <created>1484482315074</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1484482315074</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347119000" />
+    <option name="totallyTimeSpent" value="347391000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1420,7 +1483,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="qrValidation an generation" />
     <MESSAGE value="new style&#10;" />
     <MESSAGE value="fixed img" />
     <MESSAGE value="registerform" />
@@ -1445,7 +1507,8 @@
     <MESSAGE value="Home" />
     <MESSAGE value="fixes" />
     <MESSAGE value="last changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="last changes" />
+    <MESSAGE value="last fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="last fixes" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
@@ -1530,29 +1593,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
-            <element signature="e#573#594#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vistashtml/updateProfile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="255" column="6" selection-start-line="184" selection-start-column="0" selection-end-line="255" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1806,16 +1850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-          <folding>
-            <element signature="e#5374#5400#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/User/peticiones.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1931,8 +1965,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Alex/StaticPagesBundle/Resources/views/User/valorar.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="30">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
             <element signature="e#5627#5634#1#HTML" expanded="true" />
@@ -1940,6 +1974,35 @@
             <element signature="e#5823#5830#1#HTML" expanded="true" />
             <element signature="e#5921#5928#1#HTML" expanded="true" />
             <element signature="e#6019#6026#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Alex/CustomUserBundle/Resources/views/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="true" />
+            <element signature="e#573#594#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="e#5405#5431#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
