@@ -195,6 +195,12 @@ footer a:hover {
 .form-control {
     border-radius: 0;
 }
+/* Adicional*/
 textarea {
     resize: none;
+    width: 98%;
+    margin-left:1%;
+}
+.boton {
+   width: 100%;
 }
