@@ -12,17 +12,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
   <script type="text/javascript">
-    var $star_rating = $('.star-rating');
-
-    $star_rating.on('click', function() {
-      $star_rating.siblings('input.rating-value').val($(this).data('rating'));
-      return SetRatingStar();
+    $( document ).ready(function() {
+      var star_rating = $('.ec-stars-wrapper');
+      star_rating.on('click', function() {
+        $('input.rating-value').val($(this).data('value'));
+      });
     });
-
-    SetRatingStar();
   </script>
 </head>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -33,7 +33,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="" href="">
+      <a class="" href="indice.html">
         <img src="./img/logo0.png" class="logo"/>
       </a>
     </div>
@@ -53,7 +53,9 @@
 
 <!-- Modificaciones -->
 <!-- Aqui se tendrían que rellenar los valores por defecto de los campos por los que constan en la BBDD -->
-<div class="container">
+    <hr/>
+    <hr/>
+    <hr/>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3">
         <h1>Mis intercambios</h1>
         <div class="panel panel-default">
@@ -61,37 +63,44 @@
           <!-- Necesitamos generar dinámicamente uno de estos por cada registro de actividad del usuario -->
           <!-- Campos a mostrar: Persona relacionada con el servicio, dirección del servicio (si dado o recibido),
                horas, día/s -->
-          <span>Muestra:</span>
-          <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-            <span class="caret"></span></button>
-            <span>Valoración del servicio:</span>
-            <ul class="dropdown-menu">
-              <li>
-                <div class="container">
-                  <div class="ec-stars-wrapper">
-                  	<a href="#" value="1" title="Votar con 1 estrellas" onClick="">&#9733;</a>
-                  	<a href="#" data-value="2" title="Votar con 2 estrellas" onClick="">&#9733;</a>
-                  	<a href="#" data-value="3" title="Votar con 3 estrellas" onClick="">&#9733;</a>
-                  	<a href="#" data-value="4" title="Votar con 4 estrellas" onClick="">&#9733;</a>
-                  	<a href="#" data-value="5" title="Votar con 5 estrellas" onClick="">&#9733;</a>
-			              <input type="hidden" name="" class="rating-value" value="3">
-                  </div>
-                </div>
-              </li>
-              <li>
-              <span>Comentario:</span>
 
-              </li>
-            </ul>
-
-          </div>
-
+        <div>
+          <table>
+            <tr>
+              <th>Usuario relacionado</th>
+              <th>Tipo de servicio</th>
+              <th>Horas</th>
+            </tr>
+            <!-- en esta row se deberían rellenar datos -->
+            <tr>
+              <td>Diana</td>
+              <td>Prestado</td>
+              <td>3h</td>
+            </tr>
+          </table>
         </div>
-        <br>
-        <br>
+        <hr/>
+        <span>Valoración del servicio:</span>
+
+      	<a class="ec-stars-wrapper" data-value="1" title="Votar con 1 estrellas" >&#9733;</a>
+      	<a class="ec-stars-wrapper" data-value="2" title="Votar con 2 estrellas" >&#9733;</a>
+      	<a class="ec-stars-wrapper" data-value="3" title="Votar con 3 estrellas" >&#9733;</a>
+      	<a class="ec-stars-wrapper" data-value="4" title="Votar con 4 estrellas" >&#9733;</a>
+      	<a class="ec-stars-wrapper" data-value="5" title="Votar con 5 estrellas" >&#9733;</a>
+        <div>
+          Rating actual:
+          <input type="number" min="0" max="5" name="" class="rating-value" value="3">
+        </div>
+        <hr/>
+        <span>Comentario:</span>
+        <br/>
+        <textarea rows="3" name="" class="comentario" value=""></textarea>
+        <hr/>
+        <input type="submit" class="boton btn btn-primary center-block boton" value="Enviar comentario">
+        <hr/>
+
     </div>
-</div>
+
 <!-- fin modificaciones -->
 
 <!-- Footer -->

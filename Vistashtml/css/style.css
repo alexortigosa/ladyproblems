@@ -1,6 +1,59 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px !important;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd !important;
+}
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`)
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	/*font-size: 0;
+	/* Podríamos quitarlo,
+		pero de esta manera (siempre que no le demos padding),
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: inline-block;
+  decoration: none;
+  cursor: pointer;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+  decoration: none;
+  cursor: pointer;
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+  decoration: none;
+  cursor: pointer;
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+  decoration: none;
+  cursor: pointer;
+}, /* FROM https://emiliocobos.net/calificacion-estrellas-solo-con-css/*/
 .logo {
   margin-right:0%;
-  width:35%;
+  width:15%;
+  height: 15%;
+  padding:15%;
   padding-left: 1%;
   padding-top: 2%;
 }
@@ -142,6 +195,12 @@ footer a:hover {
 .form-control {
     border-radius: 0;
 }
+/* Adicional*/
 textarea {
     resize: none;
+    width: 98%;
+    margin-left:1%;
+}
+.boton {
+   width: 100%;
 }
