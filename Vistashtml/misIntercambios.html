@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Baby Time!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <script type="text/javascript">
+    var $star_rating = $('.star-rating');
+
+    $star_rating.on('click', function() {
+      $star_rating.siblings('input.rating-value').val($(this).data('rating'));
+      return SetRatingStar();
+    });
+
+    SetRatingStar();
+  </script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="" href="">
+        <img src="./img/logo0.png" class="logo"/>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="indice.php">HOME</a></li>
+        <li><a href="#">SERVICIOS</a></li>
+		<li><a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTACT</a></li>
+		<li><a href="#">FAQ</a></li>
+		<li><a href="login.php">LOGIN</a></li>
+        <li><a href="registro.php">REGISTRO</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Modificaciones -->
+<!-- Aqui se tendrían que rellenar los valores por defecto de los campos por los que constan en la BBDD -->
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3">
+        <h1>Mis intercambios</h1>
+        <div class="panel panel-default">
+
+          <!-- Necesitamos generar dinámicamente uno de estos por cada registro de actividad del usuario -->
+          <!-- Campos a mostrar: Persona relacionada con el servicio, dirección del servicio (si dado o recibido),
+               horas, día/s -->
+          <span>Muestra:</span>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+            <span class="caret"></span></button>
+            <span>Valoración del servicio:</span>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="container">
+                  <div class="ec-stars-wrapper">
+                  	<a href="#" value="1" title="Votar con 1 estrellas" onClick="">&#9733;</a>
+                  	<a href="#" data-value="2" title="Votar con 2 estrellas" onClick="">&#9733;</a>
+                  	<a href="#" data-value="3" title="Votar con 3 estrellas" onClick="">&#9733;</a>
+                  	<a href="#" data-value="4" title="Votar con 4 estrellas" onClick="">&#9733;</a>
+                  	<a href="#" data-value="5" title="Votar con 5 estrellas" onClick="">&#9733;</a>
+			              <input type="hidden" name="" class="rating-value" value="3">
+                  </div>
+                </div>
+              </li>
+              <li>
+              <span>Comentario:</span>
+
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+<!-- fin modificaciones -->
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
