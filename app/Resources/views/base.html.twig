@@ -169,6 +169,10 @@
         textarea {
             resize: none;
         }
+        .customclass{
+            padding-right: 2%;
+            padding-left: 2%;
+        }
     </style>
     {% endblock %}
 </head>
@@ -210,7 +214,7 @@
         {% endfor %}
     {% endif %}
 
-
+<div class="customclass">
 {% block contenido %}
     <!-- CAROUSEL-->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -265,6 +269,7 @@
         <a href="registro.php" class="btn btn-warning">Registrarme!</a>
     </div>
 {% endblock %}
+</div>
 
 
 
