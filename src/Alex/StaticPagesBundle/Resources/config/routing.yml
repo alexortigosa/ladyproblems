@@ -3,19 +3,16 @@ alex_static_pages_homepage:
     defaults: { _controller: AlexStaticPagesBundle:Default:index }
 alex_static_pages_servicios:
     path:     /servicios/
-    defaults: { _controller: AlexStaticPagesBundle:Default:servicios }
-alex_static_pages_ecomerce:
-    path:     /servicios/e-commerce
-    defaults: { _controller: AlexStaticPagesBundle:Default:ecom }
-alex_static_pages_medida:
-    path:     /servicios/amedida
-    defaults: { _controller: AlexStaticPagesBundle:Default:medida }
-alex_static_pages_integration:
-    path:     /servicios/integracion
-    defaults: { _controller: AlexStaticPagesBundle:Default:integration }
-alex_static_pages_layout:
-    path:     /layout
-    defaults: { _controller: AlexStaticPagesBundle:Default:layout }
+    defaults: { _controller: AlexStaticPagesBundle:User:servicios }
+alex_static_pages_solicitar:
+    path:     /servicios/solicitar
+    defaults: { _controller: AlexStaticPagesBundle:User:solicitar }
+alex_static_pages_solicitar_post:
+    path:     /servicios/solicitar/post
+    defaults: { _controller: AlexStaticPagesBundle:Servicio:mostrarPeticionesSegunPreferencias }
+alex_static_pages_servicios_mostrar:
+    path:     /servicios/solicitar/mostrar
+    defaults: { _controller: AlexStaticPagesBundle:User:muestraServicios }
 alex_static_pages_contact:
     path:     /contacto
     defaults: { _controller: AlexStaticPagesBundle:Default:contact }
@@ -55,12 +52,3 @@ alex_static_pages_qr_validation:
 alex_static_pages_tweet_list:
     path:     /tweetlist
     defaults: { _controller: AlexStaticPagesBundle:Default:twitts }
-alex_static_pages_sorteos:
-    path:     /sorteos
-    defaults: { _controller: AlexStaticPagesBundle:Default:sorteos }
-alex_static_pages_update_users:
-    path:     /update
-    defaults: { _controller: AlexStaticPagesBundle:User:asignarteguntwit }
-alex_static_pages_users_sorteos:
-    path:     /missorteos
-    defaults: { _controller: AlexStaticPagesBundle:User:muestratorneos }

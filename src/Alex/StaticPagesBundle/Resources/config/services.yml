@@ -29,6 +29,12 @@ services:
                   class: Alex\StaticPagesBundle\Form\RegistrationType
                   tags:
                       - { name: form.type, alias: app_user_registration }
+    app.customform.userprofile:
+      class:  Alex\StaticPagesBundle\Form\ProfileType
+      tags:
+        - {name: form.type, alias: app_user_profile}
+      arguments: ['%fos_user.model.user.class%']
+
     app.syncrostrategy:
       class: Alex\StaticPagesBundle\Utils\ISyncroStrategy
     app.syncrofunction:

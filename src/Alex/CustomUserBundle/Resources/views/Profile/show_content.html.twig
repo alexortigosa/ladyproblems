@@ -1,7 +1,22 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div class="fos_user_user_show">
+<div class="col-md-6 col-lg-6 ">
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-    <p> <a href="">Mis sorteos ganados</a></p>
+</div>
+<div class="col-md-6 col-lg-6">
+
+    <img src="{{ asset('assets/img/infoblock/amedida.jpg') }}" class="img-circle center-block" alt="Cinque Terre" width="50%">
+
+</div>
+<div class="col-md-6 col-lg-6">
+
+    <img src="http://ayayay.tv/wp-content/uploads/2016/03/tiempo-1.jpg" class="img-circle center-block" alt="Cinque Terre" width="50%">
+    <p class="text-center"><span class="badge">{{ user.tiempo }}</span> horas</p>
+
+</div>
+
+<div class="fos_user_user_show">
+
 </div>

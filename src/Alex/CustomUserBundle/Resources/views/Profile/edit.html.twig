@@ -1,5 +1,20 @@
-{% extends "FOSUserBundle::layout.html.twig" %}
+{% extends "base.html.twig" %}
 
-{% block fos_user_content %}
-{% include "FOSUserBundle:Profile:edit_content.html.twig" %}
-{% endblock fos_user_content %}
+
+{% block contenido %}
+<div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3">
+        <h1>Actualizar perfil</h1>
+        <div class="panel panel-default">
+
+            {% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+
+
+
+        </div>
+
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

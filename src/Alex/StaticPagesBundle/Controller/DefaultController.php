@@ -122,9 +122,7 @@ class DefaultController extends Controller
     public function formsuccesAction(){
         return $this->render('AlexStaticPagesBundle:contacto:succesform.html.twig',array("breadcrumbs" => $this->getBreadCrumb("contacto")));
     }
-    public function serviciosAction(){
-        return $this->render('@AlexStaticPages/Servicios/servicios.html.twig',array("breadcrumbs" => $this->getBreadCrumb("contacto")));
-    }
+
     public function formfailedAction(){
         return $this->render('AlexStaticPagesBundle:contacto:failedform.html.twig',array("breadcrumbs" => $this->getBreadCrumb("contacto")));
     }

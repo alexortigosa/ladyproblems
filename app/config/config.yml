@@ -86,6 +86,7 @@ fos_user:
                 validation_groups: [AcmeRegistration]
     profile:
       form:
+        type: Alex\StaticPagesBundle\Form\ProfileType
         validation_groups: [AcmeProfile]
     group:
       group_class: Alex\StaticPagesBundle\Entity\Group
