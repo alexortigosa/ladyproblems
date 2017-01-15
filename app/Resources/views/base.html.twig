@@ -16,6 +16,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
+        .logo {
+            margin-right:0%;
+            width:35%;
+            padding-left: 1%;
+            padding-top: 2%;
+        }
         body {
             font: 400 15px/1.8 Lato, sans-serif;
             color: #777;
@@ -43,7 +49,7 @@
             border-color: #f1f1f1;
         }
         .carousel-inner img {
-            -webkit-filter: grayscale(90%);
+            /*-webkit-filter: grayscale(90%);
             filter: grayscale(90%); /* make all photos black and white */
             width: 100%; /* Set width to 100% */
             margin: auto;
@@ -90,6 +96,11 @@
             border: 1px solid #333;
             background-color: #fff;
             color: #000;
+        }
+        .boton {
+
+            width: 100%;
+
         }
         .modal-header, h4, .close {
             background-color: #333;
@@ -173,7 +184,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#myPage">Logo</a>
+            <a class="" href="{{ path('alex_static_pages_homepage') }}"><img class="logo" src="{{ asset('assets/img/logo0.png') }}"/> </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -260,8 +271,7 @@
 
 <!-- Footer -->
 <footer class="text-center">
-    <br>
-    <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p>
+    <p>BabyTime By <a href="#" data-toggle="tooltip" title="Visit w3schools">BabyTimeTeam</a></p>
 </footer>
 {% block customjs %}
 <script>

@@ -43,4 +43,9 @@ class ServicioController extends Controller
                 array("breadcrumbs" => $this->getBreadCrumb("home")));*/
 
     }
+
+    function mostrarPeticionAction($id = 1){
+        return $this->render('@AlexStaticPages/Servicios/peticion.html.twig',array(
+            'idpet' => $id));
+    }
 }

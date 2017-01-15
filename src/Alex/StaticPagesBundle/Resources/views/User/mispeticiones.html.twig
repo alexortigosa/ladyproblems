@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+
+                <h1>Mis Peticiones</h1>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <a href="#">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object img-circle" src="{{ asset('assets/img/andrea.png') }}" width="64px" height="64px" alt="...">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Peticion1</h4>
+                        Cras sit amet nibh libero, in gravida nulla.
+                        <strong>Lunes de 17:00 a 19:00</strong>
+                        <a href="{{ path('alex_static_pages_servicios_valorar') }}"> <button class="boton btn btn-primary">Valorar</button></a>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object img-circle" src="{{ asset('assets/img/andrea.png') }}" width="64px" height="64px" alt="...">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Peticion2</h4>
+                        Cras sit amet nibh libero, in gravida nulla.
+                        <strong>Martes de 17:00 a 19:00</strong>
+                        <a href="{{ path('alex_static_pages_servicios_valorar') }}"> <button class="boton btn btn-primary">Valorar</button></a>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+{% endblock %}

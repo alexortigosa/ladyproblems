@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+{% block customcss %}
+    {{ parent() }}
+    <style>
+    /*CSSS DE VISTA USUARIO*/
+    body {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    .imagen {
+
+
+    width: 40%;
+    height: 40%;
+    }
+    .centro {
+
+    text-align: center;
+    }
+
+    .panel {
+    padding: 20px;
+    }
+
+    h3 {
+    font-size: 18px;
+    margin: 10px;
+        letter-spacing: 0.1em;
+    }
+
+    h1 {
+    margin: 20px;
+    }
+    .color-td {
+    background: #fff59d;
+    }
+
+    .color-mensaje {
+    background: #00c853;
+    border: 1px solid #00c853;
+    }
+    </style>
+    {% endblock %}
+{% block contenido %}
+    <div class="panel panel-default">
+        <img  src="{{ asset('assets/img/andrea.png') }}" alt="usuario"  class="img-circle center-block imagen"/>
+        <h1 class=" centro">Andrea - Petición {{ idpet }}</h1>
+
+        <h3>Mi hijo es activo y obediente. Es muy sociable y rápido se relaciona con otros niños.</h3>
+        <table class="table">
+            <thead class="thead-inverse">
+            <tr>
+
+                <th>Dia disponible</th>
+                <th>Rango horario</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="color-td">
+                <th scope="row">Miercoles</th>
+                <td>7:00 - 9:00 h</td>
+
+            </tr>
+
+
+            </tbody>
+        </table>
+        <br>
+        <button type="submit" class="btn btn-primary center-block boton color-mensaje ">Enviar mensaje</button>
+        <br>
+        <button type="submit" class="btn btn-primary center-block boton">Solicitar Servicio</button>
+    </div>
+
+    <br>
+    <br>
+
+{% endblock %}

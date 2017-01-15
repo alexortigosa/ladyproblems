@@ -5,13 +5,11 @@
 {% endblock %}
 {% block contenido %}
 
-    <div class="container">
+    <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2">
             <h1>Registro</h1>
             <div class="panel panel-default">
-                <div class="panel-heading text-center">
-                    {% trans from 'trans' %}Registro{% endtrans %}
-                </div>
+
                 <div class="panel-body">
                     {% include('FOSUserBundle:Registration:register_content.html.twig') %}
                 </div>

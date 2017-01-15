@@ -20,7 +20,7 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
-				<img src="{{ asset('assets/img/img1.jpg') }}" alt="New York" width="1200" height="700">
+				<img src="{{ asset('assets/img/slider/img1.jpg') }}" alt="New York" width="1200" height="700">
 				<div class="carousel-caption">
 					<h3>New York</h3>
 					<p>The atmosphere in New York is lorem ipsum.</p>
@@ -28,7 +28,7 @@
 			</div>
 
 			<div class="item">
-				<img src="{{ asset('assets/img/img2.jpg') }}" alt="Chicago" width="1200" height="700">
+				<img src="{{ asset('assets/img/slider/img2.jpg') }}" alt="Chicago" width="1200" height="700">
 				<div class="carousel-caption">
 					<h3>Chicago</h3>
 					<p>Thank you, Chicago - A night we won't forget.</p>
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="item">
-				<img src="{{ asset('assets/img/img3.jpg') }}" alt="Los Angeles" width="1200" height="700">
+				<img src="{{ asset('assets/img/slider/img3.jpg') }}" alt="Los Angeles" width="1200" height="700">
 				<div class="carousel-caption">
 					<h3>LA</h3>
 					<p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
@@ -56,9 +56,15 @@
 	</div>
 	<!-- FIN CAROUSEL -->
 	<!-- Container (The Band Section) -->
-	<div id="band" class="container text-center">
-		<h1>descripcion bla bal loremipsum bla bal</h1></br>
-		<a href="registro.php" class="btn btn-warning">Registrarme!</a>
+	<div id="band" class="text-center">
+		<p>Conciliación familiar</p>
+
+		<p><strong>Encuentra personas con las que compartir el cuidado de los hijos</strong></p>
+
+		<hr/>
+		<a href="{{ path('fos_user_registration_register') }}" class="btn btn-warning boton">Registrarme!</a>
+		<br/>
+		<br/>
 	</div>
 {% endblock %}
 {% block jsready %}

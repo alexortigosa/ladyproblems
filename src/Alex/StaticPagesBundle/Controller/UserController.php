@@ -100,16 +100,6 @@ class UserController extends Controller
                 'choices' => $this->horas,
                 'preferred_choices' => '8'
             ))
-            ->add('diaini2', ChoiceType::class, array(
-                'label' => 'Hora de Inicio',
-                'choices' => $this->horas,
-                'preferred_choices' => '8'
-            ))
-            ->add('diafin2', ChoiceType::class, array(
-                'label' => 'Hora de Inicio',
-                'choices' => $this->horas,
-                'preferred_choices' => '8'
-            ))
             ->getForm();
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -120,5 +110,12 @@ class UserController extends Controller
             array(
                 "form" => $form->createView())
         );
+    }
+
+    function mispeticionesAction(){
+        return $this->render('@AlexStaticPages/User/mispeticiones.html.twig');
+    }
+    function valorarAction(){
+        return $this->render('@AlexStaticPages/User/valorar.html.twig');
     }
 }

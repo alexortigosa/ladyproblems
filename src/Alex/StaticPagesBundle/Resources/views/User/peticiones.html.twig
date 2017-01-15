@@ -10,7 +10,7 @@
             <div class="col-lg-12">
 
                 <h1>Peticiones</h1>
-                <div class="col-m">
+                <!--<div class="col-m">
                     {% if peticiones is defined %}
                         {% if peticiones|length > 0 %}
                             {% for peticion in peticiones %}
@@ -22,12 +22,49 @@
                             <div><h1>No hay peticiones</h1></div>
                         {% endif %}
                     {% endif %}
+                </div>-->
+            </div>
+        </div>
+        <div class="col-md-6">
+            <a href="#">
+            <div class="media">
+                <div class="media-left">
+                    <a href="{{ path('alex_static_pages_peticion',{'id' : 1}) }}">
+                        <img class="media-object img-circle" src="{{ asset('assets/img/andrea.png') }}" width="64px" height="64px" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Peticion1</h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                    <br/>
+                    <strong>Lunes de 17:00 a 19:00</strong>
+                    <a href="{{ path('alex_static_pages_peticion',{'id' : 1}) }}"> <button class="boton btn btn-primary">Ver detalles</button></a>
                 </div>
             </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="">
+            <div class="media">
+                <div class="media-left">
+                    <a href="{{ path('alex_static_pages_peticion',{'id' : 2}) }}">
+                        <img class="media-object img-circle" src="{{ asset('assets/img/andrea.png') }}" width="64px" height="64px" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Peticion2</h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                    <br/>
+                    <strong>Martes de 17:00 a 19:00</strong>
+                    <a href="{{ path('alex_static_pages_peticion',{'id' : 1}) }}"> <button class="boton btn btn-primary">Ver detalles</button></a>
+                </div>
+            </div>
+            </a>
         </div>
     </div>
 
-
+<br/>
+    <br/>
 
 {% endblock %}
 {% block customjs %}

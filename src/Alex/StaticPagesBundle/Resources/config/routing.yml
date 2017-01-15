@@ -7,12 +7,21 @@ alex_static_pages_servicios:
 alex_static_pages_solicitar:
     path:     /servicios/solicitar
     defaults: { _controller: AlexStaticPagesBundle:User:solicitar }
+alex_static_pages_peticion:
+    path:     /servicios/peticion/{id}
+    defaults: { _controller: AlexStaticPagesBundle:Servicio:mostrarPeticion }
 alex_static_pages_solicitar_post:
     path:     /servicios/solicitar/post
     defaults: { _controller: AlexStaticPagesBundle:Servicio:mostrarPeticionesSegunPreferencias }
 alex_static_pages_servicios_mostrar:
     path:     /servicios/solicitar/mostrar
     defaults: { _controller: AlexStaticPagesBundle:User:muestraServicios }
+alex_static_pages_servicios_valorar:
+    path:     /servicios/valorar
+    defaults: { _controller: AlexStaticPagesBundle:User:valorar }
+alex_static_pages_servicios_mispeticiones:
+    path:     /servicios/mispeticiones
+    defaults: { _controller: AlexStaticPagesBundle:User:mispeticiones }
 alex_static_pages_contact:
     path:     /contacto
     defaults: { _controller: AlexStaticPagesBundle:Default:contact }
